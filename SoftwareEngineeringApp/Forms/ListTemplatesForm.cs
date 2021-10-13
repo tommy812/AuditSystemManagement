@@ -25,18 +25,6 @@ namespace SoftwareEngineeringApp.Forms
         {
             // TODO: questa riga di codice carica i dati nella tabella 'software_EngineerDataSet2.Template'. È possibile spostarla o rimuoverla se necessario.
             this.templateTableAdapter.Fill(this.software_EngineerDataSet2.Template);
-           // String mainconn = ConfigurationManager.ConnectionStrings["Myconnection"].ConnectionString;
-            //SqlConnection sqlconn = new SqlConnection(mainconn);
-            //string sqlquery = "SELECT Template_name FROM Template";
-
-            //SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn);
-           // sqlconn.Open();
-           // SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
-           // DataTable dt = new DataTable();
-          //  sdr.Fill(dt);
-           // TemplatesGridView.DataSource = dt;
-           // sqlconn.Close();
-
 
         }
 
@@ -45,12 +33,15 @@ namespace SoftwareEngineeringApp.Forms
 
             CategoriesLbl.Visible = true;
             CategoriesGridView.Visible = true;
+            QuestionsLbl.Visible = true;
+            QuestionsDataGrid.Visible = true;
             int orderno = 0;
             Int32.TryParse(TemplatesGridView.Rows[e.RowIndex].Cells[0].Value.ToString(), out orderno);
             template_no = orderno;
 
 
             CategoriesGridView.DataSource = GetCategories();
+            QuestionsDataGrid.DataSource = GetQuestions();
         }
 
         private DataTable GetCategories()
@@ -70,6 +61,24 @@ namespace SoftwareEngineeringApp.Forms
             }
             return dtCategories;
            
+        }
+        private DataTable GetQuestions()
+        {
+
+            DataTable dtQuestions = new DataTable();
+            string connectionString = "Data Source=DESKTOP-J7QCD3H;Initial Catalog=Software_Engineer;Integrated Security=True";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT Question, Category_ID FROM Questions WHERE Template_ID = " + template_no + "", con))
+                {
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    dtQuestions.Load(reader);
+                }
+            }
+            return dtQuestions;
+
         }
     }
 }

@@ -68,7 +68,7 @@
             this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
-            this.MenuPanel.Size = new System.Drawing.Size(220, 675);
+            this.MenuPanel.Size = new System.Drawing.Size(220, 834);
             this.MenuPanel.TabIndex = 0;
             // 
             // panel8
@@ -107,7 +107,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 624);
+            this.panel6.Location = new System.Drawing.Point(0, 783);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(220, 1);
             this.panel6.TabIndex = 7;
@@ -175,7 +175,7 @@
             this.LogOutBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.LogOutBtn.IconColor = System.Drawing.Color.Black;
             this.LogOutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.LogOutBtn.Location = new System.Drawing.Point(0, 625);
+            this.LogOutBtn.Location = new System.Drawing.Point(0, 784);
             this.LogOutBtn.Name = "LogOutBtn";
             this.LogOutBtn.Size = new System.Drawing.Size(220, 50);
             this.LogOutBtn.TabIndex = 2;
@@ -210,9 +210,9 @@
             this.panel5.Controls.Add(this.UsernameBtn);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(220, 624);
+            this.panel5.Location = new System.Drawing.Point(220, 783);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(928, 51);
+            this.panel5.Size = new System.Drawing.Size(1144, 51);
             this.panel5.TabIndex = 1;
             // 
             // TimeBtn
@@ -227,7 +227,7 @@
             this.TimeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TimeBtn.IconSize = 35;
             this.TimeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TimeBtn.Location = new System.Drawing.Point(0, 1);
+            this.TimeBtn.Location = new System.Drawing.Point(216, 1);
             this.TimeBtn.Name = "TimeBtn";
             this.TimeBtn.Size = new System.Drawing.Size(307, 50);
             this.TimeBtn.TabIndex = 3;
@@ -248,7 +248,7 @@
             this.LocationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LocationBtn.IconSize = 35;
             this.LocationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LocationBtn.Location = new System.Drawing.Point(307, 1);
+            this.LocationBtn.Location = new System.Drawing.Point(523, 1);
             this.LocationBtn.Name = "LocationBtn";
             this.LocationBtn.Size = new System.Drawing.Size(310, 50);
             this.LocationBtn.TabIndex = 2;
@@ -269,7 +269,7 @@
             this.UsernameBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.UsernameBtn.IconSize = 35;
             this.UsernameBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UsernameBtn.Location = new System.Drawing.Point(617, 1);
+            this.UsernameBtn.Location = new System.Drawing.Point(833, 1);
             this.UsernameBtn.Name = "UsernameBtn";
             this.UsernameBtn.Size = new System.Drawing.Size(311, 50);
             this.UsernameBtn.TabIndex = 1;
@@ -284,7 +284,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(928, 1);
+            this.panel7.Size = new System.Drawing.Size(1144, 1);
             this.panel7.TabIndex = 0;
             // 
             // DefaultLogoPnl
@@ -294,7 +294,7 @@
             this.DefaultLogoPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DefaultLogoPnl.Location = new System.Drawing.Point(220, 0);
             this.DefaultLogoPnl.Name = "DefaultLogoPnl";
-            this.DefaultLogoPnl.Size = new System.Drawing.Size(928, 624);
+            this.DefaultLogoPnl.Size = new System.Drawing.Size(1144, 783);
             this.DefaultLogoPnl.TabIndex = 2;
             // 
             // timer1
@@ -306,12 +306,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(1148, 675);
+            this.ClientSize = new System.Drawing.Size(1364, 834);
             this.Controls.Add(this.DefaultLogoPnl);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.MenuPanel);
-            this.MinimumSize = new System.Drawing.Size(1164, 714);
+            this.MinimumSize = new System.Drawing.Size(1380, 873);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.MenuPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
