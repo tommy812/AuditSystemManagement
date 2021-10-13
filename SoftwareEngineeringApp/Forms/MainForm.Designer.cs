@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.AddTemplateBtn = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -43,8 +46,7 @@
             this.UsernameBtn = new FontAwesome.Sharp.IconButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DefaultLogoPnl = new System.Windows.Forms.Panel();
-            this.AddTemplateBtn = new FontAwesome.Sharp.IconButton();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MenuPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,6 +70,38 @@
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(220, 675);
             this.MenuPanel.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 262);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(220, 1);
+            this.panel8.TabIndex = 9;
+            // 
+            // AddTemplateBtn
+            // 
+            this.AddTemplateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.AddTemplateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddTemplateBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddTemplateBtn.FlatAppearance.BorderSize = 0;
+            this.AddTemplateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddTemplateBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddTemplateBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.AddTemplateBtn.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.AddTemplateBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(237)))));
+            this.AddTemplateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.AddTemplateBtn.IconSize = 30;
+            this.AddTemplateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddTemplateBtn.Location = new System.Drawing.Point(0, 202);
+            this.AddTemplateBtn.Name = "AddTemplateBtn";
+            this.AddTemplateBtn.Size = new System.Drawing.Size(220, 60);
+            this.AddTemplateBtn.TabIndex = 8;
+            this.AddTemplateBtn.Text = "Add Template";
+            this.AddTemplateBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddTemplateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddTemplateBtn.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -147,6 +181,7 @@
             this.LogOutBtn.TabIndex = 2;
             this.LogOutBtn.Text = "Log Out";
             this.LogOutBtn.UseVisualStyleBackColor = true;
+            this.LogOutBtn.Click += new System.EventHandler(this.LogOutBtn_Click);
             // 
             // panel1
             // 
@@ -262,37 +297,9 @@
             this.DefaultLogoPnl.Size = new System.Drawing.Size(928, 624);
             this.DefaultLogoPnl.TabIndex = 2;
             // 
-            // AddTemplateBtn
+            // timer1
             // 
-            this.AddTemplateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.AddTemplateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddTemplateBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddTemplateBtn.FlatAppearance.BorderSize = 0;
-            this.AddTemplateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddTemplateBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddTemplateBtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.AddTemplateBtn.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.AddTemplateBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(237)))));
-            this.AddTemplateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AddTemplateBtn.IconSize = 30;
-            this.AddTemplateBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddTemplateBtn.Location = new System.Drawing.Point(0, 202);
-            this.AddTemplateBtn.Name = "AddTemplateBtn";
-            this.AddTemplateBtn.Size = new System.Drawing.Size(220, 60);
-            this.AddTemplateBtn.TabIndex = 8;
-            this.AddTemplateBtn.Text = "Add Template";
-            this.AddTemplateBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddTemplateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AddTemplateBtn.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 262);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(220, 1);
-            this.panel8.TabIndex = 9;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainForm
             // 
@@ -334,5 +341,6 @@
         private System.Windows.Forms.Panel DefaultLogoPnl;
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton AddTemplateBtn;
+        private System.Windows.Forms.Timer timer1;
     }
 }

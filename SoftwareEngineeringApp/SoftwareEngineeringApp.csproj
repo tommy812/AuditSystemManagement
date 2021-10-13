@@ -37,6 +37,7 @@
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -69,6 +70,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Software_EngineerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Software_EngineerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Software_EngineerDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Software_EngineerDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Software_EngineerDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\ListTemplatesForm.resx">
       <DependentUpon>ListTemplatesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +122,39 @@
     <None Include="Logo.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Software_EngineerDataSet.xsc">
+      <DependentUpon>Software_EngineerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Software_EngineerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Software_EngineerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Software_EngineerDataSet.xss">
+      <DependentUpon>Software_EngineerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Software_EngineerDataSet1.xsc">
+      <DependentUpon>Software_EngineerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Software_EngineerDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Software_EngineerDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Software_EngineerDataSet1.xss">
+      <DependentUpon>Software_EngineerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Software_EngineerDataSet2.xsc">
+      <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Software_EngineerDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Software_EngineerDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Software_EngineerDataSet2.xss">
+      <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="User.png" />
   </ItemGroup>
   <ItemGroup>
