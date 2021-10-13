@@ -40,7 +40,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(870, 140);
+            this.panel1.Size = new System.Drawing.Size(1006, 140);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -50,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(243, 48);
+            this.label1.Location = new System.Drawing.Point(311, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(396, 44);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 603);
+            this.ClientSize = new System.Drawing.Size(1006, 679);
             this.Controls.Add(this.panel1);
             this.Name = "ListTemplatesForm";
             this.Text = "ListTemplates";
