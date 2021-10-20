@@ -102,7 +102,12 @@ namespace SoftwareEngineeringApp.Forms
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            openForm(new inspectionForm());
+
+            //openForm(new inspectionForm());
+
+            InspectionForm form2 = new InspectionForm();
+            form2.Show();
+
         }
     }
 }

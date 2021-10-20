@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoftwareEngineeringApp.Forms
 {
-    public partial class inspectionForm : Form
+    public partial class InspectionForm : Form
     {
-        public inspectionForm()
+        public InspectionForm()
         {
             InitializeComponent();
         }

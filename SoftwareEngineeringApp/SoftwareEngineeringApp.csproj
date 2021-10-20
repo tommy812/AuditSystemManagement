@@ -50,11 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\inspectionForm.cs">
+    <Compile Include="Forms\InspectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\inspectionForm.Designer.cs">
-      <DependentUpon>inspectionForm.cs</DependentUpon>
+    <Compile Include="Forms\InspectionForm.Designer.cs">
+      <DependentUpon>InspectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ListTemplatesForm.cs">
       <SubType>Form</SubType>
@@ -91,8 +91,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\inspectionForm.resx">
-      <DependentUpon>inspectionForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\InspectionForm.resx">
+      <DependentUpon>InspectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListTemplatesForm.resx">
       <DependentUpon>ListTemplatesForm.cs</DependentUpon>
