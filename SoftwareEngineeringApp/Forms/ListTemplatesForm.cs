@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SoftwareEngineeringApp.Forms
 {
     public partial class ListTemplatesForm : Form
@@ -79,6 +80,29 @@ namespace SoftwareEngineeringApp.Forms
             }
             return dtQuestions;
 
+        }
+        //Activate Student Form Function
+        private Form ActiveForm = null;
+
+        //openform
+        public void openForm(Form ToOpenForm)
+        {
+            if (ActiveForm != null)
+                ActiveForm.Close();
+            ActiveForm = ToOpenForm;
+            ToOpenForm.TopLevel = false;
+            ToOpenForm.FormBorderStyle = FormBorderStyle.None;
+            ToOpenForm.Dock = DockStyle.Fill;
+            InspectionTemplatePnl.Controls.Add(ToOpenForm);
+            InspectionTemplatePnl.Tag = ToOpenForm;
+            ToOpenForm.BringToFront();
+            ToOpenForm.Show();
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            openForm(new inspectionForm());
         }
     }
 }

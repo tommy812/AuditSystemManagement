@@ -29,7 +29,7 @@ namespace SoftwareEngineeringApp
         private Form ActiveForm = null;
         
         //openform
-        private void openForm(Form ToOpenForm)
+        public void openForm(Form ToOpenForm)
         {
             if (ActiveForm != null)
                 ActiveForm.Close();
