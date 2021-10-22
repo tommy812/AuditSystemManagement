@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -83,21 +98,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Software_EngineerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Software_EngineerDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Software_EngineerDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Software_EngineerDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Software_EngineerDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\addtemplate.resx">
       <DependentUpon>addtemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,39 +141,6 @@
     <None Include="Logo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Software_EngineerDataSet.xsc">
-      <DependentUpon>Software_EngineerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Software_EngineerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Software_EngineerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Software_EngineerDataSet.xss">
-      <DependentUpon>Software_EngineerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Software_EngineerDataSet1.xsc">
-      <DependentUpon>Software_EngineerDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Software_EngineerDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Software_EngineerDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Software_EngineerDataSet1.xss">
-      <DependentUpon>Software_EngineerDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Software_EngineerDataSet2.xsc">
-      <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="Software_EngineerDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Software_EngineerDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Software_EngineerDataSet2.xss">
-      <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="User.png" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +149,27 @@
   <ItemGroup>
     <Folder Include="Classes\" />
     <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SoftwareEngineering.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SoftwareEngineering_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>SoftwareEngineering.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
