@@ -8,9 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SoftwareEngineeringApp;
 
 
-      
+
 namespace SoftwareEngineeringApp
 {
     public partial class MainForm : Form
@@ -24,30 +25,43 @@ namespace SoftwareEngineeringApp
            
             
         }
-
         //Activate Student Form Function
-        private Form ActiveForm = null;
+         private Form ActiveForm = null;
         
+       
+       
         //openform
         public void openForm(Form ToOpenForm)
         {
             if (ActiveForm != null)
                 ActiveForm.Close();
-            ActiveForm = ToOpenForm;
-            ToOpenForm.TopLevel = false;
-            ToOpenForm.FormBorderStyle = FormBorderStyle.None;
-            ToOpenForm.Dock = DockStyle.Fill;
-            DefaultLogoPnl.Controls.Add(ToOpenForm);
-            DefaultLogoPnl.Tag = ToOpenForm;
-            ToOpenForm.BringToFront();
-            ToOpenForm.Show();
+                ActiveForm = ToOpenForm;
+                ToOpenForm.TopLevel = false;
+                ToOpenForm.FormBorderStyle = FormBorderStyle.None;
+                ToOpenForm.Dock = DockStyle.Fill;
+                DefaultLogoPnl.Controls.Add(ToOpenForm);
+                DefaultLogoPnl.Tag = ToOpenForm;
+                ToOpenForm.BringToFront();
+                ToOpenForm.Show();
 
         }
 
         private void NewInspectionBtn_Click(object sender, EventArgs e)
         {
             openForm(new ListTemplatesForm());
+            ListTemplatesForm listForm = new ListTemplatesForm();
+            listForm.ContinueBtn.Click += ContinueBtn_Click;
+
+
         }
+
+        private void ContinueBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+ 
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -67,9 +81,11 @@ namespace SoftwareEngineeringApp
 
         private void AddTemplateBtn_Click(object sender, EventArgs e)
         {
-            addtemplate addTemplateForm = new addtemplate();
-            addTemplateForm.Show();
+            openForm(new addtemplate());
         }
+
+        ListTemplatesForm listform;
+        
     }
 
     

@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
     <Compile Include="Forms\addtemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +180,7 @@
     <None Include="Password.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Classes\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

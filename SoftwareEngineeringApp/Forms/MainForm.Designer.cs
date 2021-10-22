@@ -340,7 +340,7 @@
         private FontAwesome.Sharp.IconButton UsernameBtn;
         private FontAwesome.Sharp.IconButton TimeBtn;
         private FontAwesome.Sharp.IconButton LocationBtn;
-        private System.Windows.Forms.Panel DefaultLogoPnl;
+        public System.Windows.Forms.Panel DefaultLogoPnl;
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton AddTemplateBtn;
         private System.Windows.Forms.Timer timer1;

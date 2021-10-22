@@ -82,7 +82,8 @@ namespace SoftwareEngineeringApp.Forms
 
         }
         //Activate Student Form Function
-        private Form ActiveForm = null;
+        private Form ActiveForm = Form.ActiveForm;
+        MainForm main = new MainForm();
 
         //openform
         public void openForm(Form ToOpenForm)
@@ -93,20 +94,20 @@ namespace SoftwareEngineeringApp.Forms
             ToOpenForm.TopLevel = false;
             ToOpenForm.FormBorderStyle = FormBorderStyle.None;
             ToOpenForm.Dock = DockStyle.Fill;
-            InspectionTemplatePnl.Controls.Add(ToOpenForm);
-            InspectionTemplatePnl.Tag = ToOpenForm;
+            main.DefaultLogoPnl.Controls.Add(ToOpenForm);
+            main.DefaultLogoPnl.Tag = ToOpenForm;
             ToOpenForm.BringToFront();
             ToOpenForm.Show();
 
         }
+    
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            this.Close();
+            //openForm(new InspectionForm());
 
-            //openForm(new inspectionForm());
-
-            InspectionForm form2 = new InspectionForm();
-            form2.Show();
+            
 
         }
     }
