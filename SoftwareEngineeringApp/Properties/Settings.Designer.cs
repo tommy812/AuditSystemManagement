@@ -28,9 +28,9 @@ namespace SoftwareEngineeringApp.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-J7QCD3H;Initial Catalog=Software_Engineer;Integrated Security" +
             "=True")]
-        public string Software_EngineerConnectionString {
+        public string DBConnectionString {
             get {
-                return ((string)(this["Software_EngineerConnectionString"]));
+                return ((string)(this["DBConnectionString"]));
             }
         }
     }
