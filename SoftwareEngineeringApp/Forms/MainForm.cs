@@ -64,6 +64,12 @@ namespace SoftwareEngineeringApp
             this.Visible = false;
 
         }
+
+        private void AddTemplateBtn_Click(object sender, EventArgs e)
+        {
+            addtemplate addTemplateForm = new addtemplate();
+            addTemplateForm.Show();
+        }
     }
 
     

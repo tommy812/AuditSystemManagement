@@ -102,6 +102,7 @@
             this.AddTemplateBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddTemplateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddTemplateBtn.UseVisualStyleBackColor = false;
+            this.AddTemplateBtn.Click += new System.EventHandler(this.AddTemplateBtn_Click);
             // 
             // panel6
             // 

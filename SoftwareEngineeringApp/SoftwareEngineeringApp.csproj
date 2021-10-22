@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\addtemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addtemplate.designer.cs">
+      <DependentUpon>addtemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InspectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Software_EngineerDataSet2.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\addtemplate.resx">
+      <DependentUpon>addtemplate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InspectionForm.resx">
       <DependentUpon>InspectionForm.cs</DependentUpon>
     </EmbeddedResource>
