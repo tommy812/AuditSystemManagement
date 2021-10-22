@@ -33,6 +33,8 @@ namespace SoftwareEngineeringApp.Classes
             return _instance;
         }
 
+
+        //returns dataset
         public DataSet GetData(string sqlQuery)
         {
 
@@ -54,7 +56,26 @@ namespace SoftwareEngineeringApp.Classes
 
                 return dataset;
         }
-       
 
-}
+        //returns datatable
+        public DataTable GetDataTable(string sqlQuery)
+        {
+
+            DataTable datatable = new DataTable();
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                //open connection
+                connToDB.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, connToDB);
+                
+                adapter.Fill(datatable);
+                
+            }
+
+                return datatable;
+        }
+
+
+    }
 }

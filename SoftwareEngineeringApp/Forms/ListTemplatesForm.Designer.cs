@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.SelectTemplateLbl = new System.Windows.Forms.Label();
@@ -44,20 +46,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.TemplateGrid = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.CategoryGrid = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.QuestionGrid = new System.Windows.Forms.DataGridView();
             this.QuestionsLbl = new System.Windows.Forms.Label();
             this.InspectionTemplatePnl = new System.Windows.Forms.Panel();
-            this.CategoryGrid = new System.Windows.Forms.DataGridView();
-            this.QuestionGrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TemplateGrid)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.InspectionTemplatePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryGrid)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestionGrid)).BeginInit();
+            this.InspectionTemplatePnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,7 +107,7 @@
             // 
             // CategoriesLbl
             // 
-            this.CategoriesLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CategoriesLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CategoriesLbl.AutoSize = true;
             this.CategoriesLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoriesLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
@@ -182,6 +184,7 @@
             this.TemplateGrid.ReadOnly = true;
             this.TemplateGrid.RowHeadersVisible = false;
             this.TemplateGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
@@ -202,44 +205,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(347, 543);
             this.panel4.TabIndex = 8;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.QuestionGrid);
-            this.panel5.Controls.Add(this.QuestionsLbl);
-            this.panel5.Location = new System.Drawing.Point(773, 146);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(377, 543);
-            this.panel5.TabIndex = 9;
-            // 
-            // QuestionsLbl
-            // 
-            this.QuestionsLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.QuestionsLbl.AutoSize = true;
-            this.QuestionsLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionsLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.QuestionsLbl.Location = new System.Drawing.Point(9, 97);
-            this.QuestionsLbl.Name = "QuestionsLbl";
-            this.QuestionsLbl.Size = new System.Drawing.Size(104, 23);
-            this.QuestionsLbl.TabIndex = 5;
-            this.QuestionsLbl.Text = "Questions:";
-            this.QuestionsLbl.Visible = false;
-            // 
-            // InspectionTemplatePnl
-            // 
-            this.InspectionTemplatePnl.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.InspectionTemplatePnl.Controls.Add(this.panel1);
-            this.InspectionTemplatePnl.Controls.Add(this.panel2);
-            this.InspectionTemplatePnl.Controls.Add(this.panel5);
-            this.InspectionTemplatePnl.Controls.Add(this.panel3);
-            this.InspectionTemplatePnl.Controls.Add(this.panel4);
-            this.InspectionTemplatePnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InspectionTemplatePnl.Location = new System.Drawing.Point(0, 0);
-            this.InspectionTemplatePnl.Name = "InspectionTemplatePnl";
-            this.InspectionTemplatePnl.Size = new System.Drawing.Size(1150, 781);
-            this.InspectionTemplatePnl.TabIndex = 10;
             // 
             // CategoryGrid
             // 
@@ -264,17 +229,38 @@
             this.CategoryGrid.Location = new System.Drawing.Point(0, 148);
             this.CategoryGrid.Name = "CategoryGrid";
             this.CategoryGrid.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CategoryGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.CategoryGrid.RowHeadersVisible = false;
             this.CategoryGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.CategoryGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.CategoryGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.CategoryGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CategoryGrid.Size = new System.Drawing.Size(345, 294);
             this.CategoryGrid.TabIndex = 5;
+            this.CategoryGrid.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.QuestionGrid);
+            this.panel5.Controls.Add(this.QuestionsLbl);
+            this.panel5.Location = new System.Drawing.Point(773, 146);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(377, 543);
+            this.panel5.TabIndex = 9;
             // 
             // QuestionGrid
             // 
@@ -284,14 +270,14 @@
             this.QuestionGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.QuestionGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.QuestionGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.QuestionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QuestionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.QuestionGrid.ColumnHeadersHeight = 30;
             this.QuestionGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.QuestionGrid.EnableHeadersVisualStyles = false;
@@ -299,17 +285,54 @@
             this.QuestionGrid.Location = new System.Drawing.Point(13, 148);
             this.QuestionGrid.Name = "QuestionGrid";
             this.QuestionGrid.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QuestionGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.QuestionGrid.RowHeadersVisible = false;
             this.QuestionGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.QuestionGrid.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.QuestionGrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.QuestionGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.QuestionGrid.Size = new System.Drawing.Size(345, 294);
             this.QuestionGrid.TabIndex = 6;
+            this.QuestionGrid.Visible = false;
+            // 
+            // QuestionsLbl
+            // 
+            this.QuestionsLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.QuestionsLbl.AutoSize = true;
+            this.QuestionsLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuestionsLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.QuestionsLbl.Location = new System.Drawing.Point(9, 97);
+            this.QuestionsLbl.Name = "QuestionsLbl";
+            this.QuestionsLbl.Size = new System.Drawing.Size(104, 23);
+            this.QuestionsLbl.TabIndex = 5;
+            this.QuestionsLbl.Text = "Questions:";
+            this.QuestionsLbl.Visible = false;
+            // 
+            // InspectionTemplatePnl
+            // 
+            this.InspectionTemplatePnl.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.InspectionTemplatePnl.Controls.Add(this.panel1);
+            this.InspectionTemplatePnl.Controls.Add(this.panel2);
+            this.InspectionTemplatePnl.Controls.Add(this.panel5);
+            this.InspectionTemplatePnl.Controls.Add(this.panel3);
+            this.InspectionTemplatePnl.Controls.Add(this.panel4);
+            this.InspectionTemplatePnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InspectionTemplatePnl.Location = new System.Drawing.Point(0, 0);
+            this.InspectionTemplatePnl.Name = "InspectionTemplatePnl";
+            this.InspectionTemplatePnl.Size = new System.Drawing.Size(1150, 781);
+            this.InspectionTemplatePnl.TabIndex = 10;
             // 
             // ListTemplatesForm
             // 
@@ -329,11 +352,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.TemplateGrid)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryGrid)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.InspectionTemplatePnl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CategoryGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QuestionGrid)).EndInit();
+            this.InspectionTemplatePnl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SoftwareEngineeringApp;
+using SoftwareEngineeringApp.Classes;
 
 
 
@@ -18,13 +19,20 @@ namespace SoftwareEngineeringApp
     {
         
 
+
         public MainForm()
         {
+            LogInForm log = new LogInForm();
+             User user = new User();
+            string name = log.user_name;
+            //MessageBox.Show(name);
             InitializeComponent();
             timer1.Start();
-           
-            
+           UsernameBtn.Text = name + " ciao " + user.Surname;
         }
+
+
+
         //Activate Student Form Function
          private Form ActiveForm = null;
         
@@ -74,7 +82,7 @@ namespace SoftwareEngineeringApp
             openForm(new addtemplate());
         }
 
-        
+      
     }
 
     

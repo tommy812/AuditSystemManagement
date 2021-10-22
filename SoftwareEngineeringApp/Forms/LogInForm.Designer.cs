@@ -130,6 +130,7 @@
             this.LogInBtn.Text = "Log In";
             this.LogInBtn.UseVisualStyleBackColor = false;
             this.LogInBtn.Click += new System.EventHandler(this.LogInBtn_Click);
+            this.LogInBtn.MouseHover += new System.EventHandler(this.LogInBtn_MouseHover);
             // 
             // ExitBtn
             // 
