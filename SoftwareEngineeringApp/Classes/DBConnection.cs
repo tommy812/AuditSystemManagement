@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SoftwareEngineeringApp.Classes
+{
+    class DBConnection
+    {
+
+        //attributes
+        //private object of the class itself 
+        private static DBConnection _instance;
+        private static string dBConnectionString;
+
+        //Constructor 
+        private DBConnection()
+        {
+            //initialise the DBconnection string 
+            dBConnectionString = Properties.Settings.Default.DBConnectionString;
+        }
+
+        //methods
+        //static method that gives access to thte private object 
+
+        public static DBConnection getInstanceOfDBConnection()
+        {
+            if (_instance == null)
+                _instance = new DBConnection();
+            return _instance;
+        }
+
+        public DataSet GetData(string sqlQuery)
+        {
+
+            DataSet dataset = new DataSet();
+
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                //open connection
+                connToDB.Open();
+
+                //send  sql  query to the database
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, connToDB);
+
+                //filll in the dataset
+                adapter.Fill(dataset);
+
+            }
+
+
+                return dataset;
+        }
+       
+
+}
+}

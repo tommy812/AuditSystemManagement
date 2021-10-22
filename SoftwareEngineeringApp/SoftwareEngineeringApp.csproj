@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
+    <Compile Include="Classes\DBConnection.cs" />
     <Compile Include="Forms\addtemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,7 +148,6 @@
     <None Include="Password.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>

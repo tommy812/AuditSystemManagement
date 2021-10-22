@@ -26,8 +26,8 @@ namespace SoftwareEngineeringApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-J7QCD3H;Initial Catalog=Software_Engineer;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SoftwareEngin" +
+            "eering.mdf;Integrated Security=True;Connect Timeout=30")]
         public string DBConnectionString {
             get {
                 return ((string)(this["DBConnectionString"]));
