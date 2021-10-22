@@ -34,7 +34,6 @@
             this.QuestionsLbl = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.addbtn = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -108,16 +107,6 @@
             this.addbtn.Text = "+ Add Question";
             this.addbtn.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(159, 570);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(794, 26);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "Authors:                                                                   User R" +
-    "ole:                                                     Date:";
-            // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,7 +123,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 608);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.QuestionsLbl);
@@ -157,7 +145,6 @@
         private System.Windows.Forms.Label QuestionsLbl;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox addbtn;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
     }
 }

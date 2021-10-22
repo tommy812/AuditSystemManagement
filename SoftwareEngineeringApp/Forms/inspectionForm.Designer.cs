@@ -28,42 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.TitlePnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.commentBox = new System.Windows.Forms.TextBox();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.FileNameTxt = new System.Windows.Forms.Label();
+            this.CommentTxtBx = new System.Windows.Forms.TextBox();
+            this.NextBtn = new FontAwesome.Sharp.IconButton();
+            this.QuestionLbl = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.InterventionTxt = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.UploadImageBtn = new FontAwesome.Sharp.IconButton();
+            this.checkBox = new System.Windows.Forms.CheckBox();
+            this.CompletedTxt = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ActionTakenTxtBx = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.PreviousBtn = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.CategoryLbl = new FontAwesome.Sharp.IconButton();
+            this.SubmitBtn = new FontAwesome.Sharp.IconButton();
+            this.TitlePnl.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // TitlePnl
             // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1229, 140);
-            this.panel1.TabIndex = 18;
+            this.TitlePnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.TitlePnl.Controls.Add(this.label1);
+            this.TitlePnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TitlePnl.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitlePnl.Location = new System.Drawing.Point(0, 0);
+            this.TitlePnl.Name = "TitlePnl";
+            this.TitlePnl.Size = new System.Drawing.Size(1229, 140);
+            this.TitlePnl.TabIndex = 18;
             // 
             // label1
             // 
@@ -79,61 +84,63 @@
             this.label1.Text = "INSPECTION PAGE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // FileNameTxt
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(906, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "FileName";
+            this.FileNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FileNameTxt.AutoSize = true;
+            this.FileNameTxt.Location = new System.Drawing.Point(906, 55);
+            this.FileNameTxt.Name = "FileNameTxt";
+            this.FileNameTxt.Size = new System.Drawing.Size(51, 13);
+            this.FileNameTxt.TabIndex = 26;
+            this.FileNameTxt.Text = "FileName";
             // 
-            // commentBox
+            // CommentTxtBx
             // 
-            this.commentBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.commentBox.Location = new System.Drawing.Point(267, 3);
-            this.commentBox.Multiline = true;
-            this.commentBox.Name = "commentBox";
-            this.commentBox.Size = new System.Drawing.Size(723, 91);
-            this.commentBox.TabIndex = 23;
-            this.commentBox.Text = "Comments";
+            this.CommentTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CommentTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CommentTxtBx.Location = new System.Drawing.Point(267, 23);
+            this.CommentTxtBx.Multiline = true;
+            this.CommentTxtBx.Name = "CommentTxtBx";
+            this.CommentTxtBx.Size = new System.Drawing.Size(723, 91);
+            this.CommentTxtBx.TabIndex = 23;
+            this.CommentTxtBx.Text = "Comments";
             // 
-            // iconButton8
+            // NextBtn
             // 
-            this.iconButton8.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.iconButton8.ForeColor = System.Drawing.Color.White;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton8.IconColor = System.Drawing.Color.Black;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.Location = new System.Drawing.Point(1037, 0);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(192, 94);
-            this.iconButton8.TabIndex = 22;
-            this.iconButton8.Text = "Next";
-            this.iconButton8.UseVisualStyleBackColor = false;
+            this.NextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.NextBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.NextBtn.FlatAppearance.BorderSize = 0;
+            this.NextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.NextBtn.ForeColor = System.Drawing.Color.White;
+            this.NextBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.NextBtn.IconColor = System.Drawing.Color.Black;
+            this.NextBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.NextBtn.Location = new System.Drawing.Point(1037, 0);
+            this.NextBtn.Name = "NextBtn";
+            this.NextBtn.Size = new System.Drawing.Size(192, 94);
+            this.NextBtn.TabIndex = 22;
+            this.NextBtn.Text = "Next";
+            this.NextBtn.UseVisualStyleBackColor = false;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
-            // iconButton2
+            // QuestionLbl
             // 
-            this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(267, 21);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(723, 55);
-            this.iconButton2.TabIndex = 17;
-            this.iconButton2.Text = "Question";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.QuestionLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.QuestionLbl.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.QuestionLbl.FlatAppearance.BorderSize = 0;
+            this.QuestionLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuestionLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.QuestionLbl.ForeColor = System.Drawing.Color.White;
+            this.QuestionLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.QuestionLbl.IconColor = System.Drawing.Color.Black;
+            this.QuestionLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.QuestionLbl.Location = new System.Drawing.Point(267, 6);
+            this.QuestionLbl.Name = "QuestionLbl";
+            this.QuestionLbl.Size = new System.Drawing.Size(723, 55);
+            this.QuestionLbl.TabIndex = 17;
+            this.QuestionLbl.Text = "Question";
+            this.QuestionLbl.UseVisualStyleBackColor = false;
             // 
             // iconButton1
             // 
@@ -149,7 +156,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.iconButton8);
+            this.panel2.Controls.Add(this.SubmitBtn);
+            this.panel2.Controls.Add(this.PreviousBtn);
+            this.panel2.Controls.Add(this.NextBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 687);
             this.panel2.Name = "panel2";
@@ -158,98 +167,99 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.iconButton2);
+            this.panel3.Controls.Add(this.CategoryLbl);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 140);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1229, 100);
+            this.panel3.Size = new System.Drawing.Size(1229, 69);
             this.panel3.TabIndex = 29;
             // 
-            // iconButton3
+            // InterventionTxt
             // 
-            this.iconButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(267, 27);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(167, 41);
-            this.iconButton3.TabIndex = 18;
-            this.iconButton3.Text = "Interventions";
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.InterventionTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.InterventionTxt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.InterventionTxt.FlatAppearance.BorderSize = 0;
+            this.InterventionTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InterventionTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.InterventionTxt.ForeColor = System.Drawing.Color.White;
+            this.InterventionTxt.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.InterventionTxt.IconColor = System.Drawing.Color.Black;
+            this.InterventionTxt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.InterventionTxt.Location = new System.Drawing.Point(267, 27);
+            this.InterventionTxt.Name = "InterventionTxt";
+            this.InterventionTxt.Size = new System.Drawing.Size(167, 41);
+            this.InterventionTxt.TabIndex = 18;
+            this.InterventionTxt.Text = "Interventions";
+            this.InterventionTxt.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.commentBox);
+            this.panel4.Controls.Add(this.QuestionLbl);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 240);
+            this.panel4.Location = new System.Drawing.Point(0, 209);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1229, 100);
+            this.panel4.Size = new System.Drawing.Size(1229, 76);
             this.panel4.TabIndex = 30;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.iconButton9);
-            this.panel5.Controls.Add(this.checkBox1);
-            this.panel5.Controls.Add(this.iconButton7);
+            this.panel5.Controls.Add(this.UploadImageBtn);
+            this.panel5.Controls.Add(this.checkBox);
+            this.panel5.Controls.Add(this.CompletedTxt);
             this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.iconButton3);
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.InterventionTxt);
+            this.panel5.Controls.Add(this.FileNameTxt);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 340);
+            this.panel5.Location = new System.Drawing.Point(0, 285);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1229, 100);
             this.panel5.TabIndex = 31;
             // 
-            // iconButton9
+            // UploadImageBtn
             // 
-            this.iconButton9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton9.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton9.FlatAppearance.BorderSize = 0;
-            this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton9.ForeColor = System.Drawing.Color.White;
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton9.IconColor = System.Drawing.Color.Black;
-            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton9.Location = new System.Drawing.Point(733, 27);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Size = new System.Drawing.Size(167, 41);
-            this.iconButton9.TabIndex = 27;
-            this.iconButton9.Text = "Upload Image";
-            this.iconButton9.UseVisualStyleBackColor = false;
+            this.UploadImageBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UploadImageBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.UploadImageBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UploadImageBtn.FlatAppearance.BorderSize = 0;
+            this.UploadImageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UploadImageBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.UploadImageBtn.ForeColor = System.Drawing.Color.White;
+            this.UploadImageBtn.IconChar = FontAwesome.Sharp.IconChar.GalacticRepublic;
+            this.UploadImageBtn.IconColor = System.Drawing.Color.CornflowerBlue;
+            this.UploadImageBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.UploadImageBtn.Location = new System.Drawing.Point(733, 27);
+            this.UploadImageBtn.Name = "UploadImageBtn";
+            this.UploadImageBtn.Size = new System.Drawing.Size(167, 41);
+            this.UploadImageBtn.TabIndex = 27;
+            this.UploadImageBtn.Text = "Upload Image";
+            this.UploadImageBtn.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // checkBox
             // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkBox1.Location = new System.Drawing.Point(708, 27);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(19, 41);
-            this.checkBox1.TabIndex = 26;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox.Location = new System.Drawing.Point(695, 27);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(19, 41);
+            this.checkBox.TabIndex = 26;
+            this.checkBox.UseVisualStyleBackColor = true;
             // 
-            // iconButton7
+            // CompletedTxt
             // 
-            this.iconButton7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton7.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton7.IconColor = System.Drawing.Color.Black;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Location = new System.Drawing.Point(522, 27);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(167, 41);
-            this.iconButton7.TabIndex = 25;
-            this.iconButton7.Text = "Completed";
-            this.iconButton7.UseVisualStyleBackColor = false;
+            this.CompletedTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CompletedTxt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.CompletedTxt.FlatAppearance.BorderSize = 0;
+            this.CompletedTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CompletedTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CompletedTxt.ForeColor = System.Drawing.Color.White;
+            this.CompletedTxt.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.CompletedTxt.IconColor = System.Drawing.Color.Black;
+            this.CompletedTxt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CompletedTxt.Location = new System.Drawing.Point(522, 27);
+            this.CompletedTxt.Name = "CompletedTxt";
+            this.CompletedTxt.Size = new System.Drawing.Size(167, 41);
+            this.CompletedTxt.TabIndex = 25;
+            this.CompletedTxt.Text = "Completed";
+            this.CompletedTxt.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -264,74 +274,146 @@
             this.textBox1.Text = "1";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // ActionTakenTxtBx
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(267, 3);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(723, 91);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Text = "Comments";
+            this.ActionTakenTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ActionTakenTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActionTakenTxtBx.Location = new System.Drawing.Point(267, 18);
+            this.ActionTakenTxtBx.Multiline = true;
+            this.ActionTakenTxtBx.Name = "ActionTakenTxtBx";
+            this.ActionTakenTxtBx.Size = new System.Drawing.Size(723, 91);
+            this.ActionTakenTxtBx.TabIndex = 24;
+            this.ActionTakenTxtBx.Text = "Action Taken";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.ActionTakenTxtBx);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 440);
+            this.panel6.Location = new System.Drawing.Point(0, 385);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1229, 100);
+            this.panel6.Size = new System.Drawing.Size(1229, 133);
             this.panel6.TabIndex = 32;
+            // 
+            // PreviousBtn
+            // 
+            this.PreviousBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.PreviousBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PreviousBtn.FlatAppearance.BorderSize = 0;
+            this.PreviousBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.PreviousBtn.ForeColor = System.Drawing.Color.White;
+            this.PreviousBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.PreviousBtn.IconColor = System.Drawing.Color.Black;
+            this.PreviousBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.PreviousBtn.Location = new System.Drawing.Point(0, 0);
+            this.PreviousBtn.Name = "PreviousBtn";
+            this.PreviousBtn.Size = new System.Drawing.Size(192, 94);
+            this.PreviousBtn.TabIndex = 23;
+            this.PreviousBtn.Text = "Previous";
+            this.PreviousBtn.UseVisualStyleBackColor = false;
+            this.PreviousBtn.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.CommentTxtBx);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 518);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1229, 149);
+            this.panel1.TabIndex = 30;
+            // 
+            // CategoryLbl
+            // 
+            this.CategoryLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CategoryLbl.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.CategoryLbl.FlatAppearance.BorderSize = 0;
+            this.CategoryLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CategoryLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CategoryLbl.ForeColor = System.Drawing.Color.White;
+            this.CategoryLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.CategoryLbl.IconColor = System.Drawing.Color.Black;
+            this.CategoryLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CategoryLbl.Location = new System.Drawing.Point(267, 11);
+            this.CategoryLbl.Name = "CategoryLbl";
+            this.CategoryLbl.Size = new System.Drawing.Size(723, 55);
+            this.CategoryLbl.TabIndex = 17;
+            this.CategoryLbl.Text = "Category";
+            this.CategoryLbl.UseVisualStyleBackColor = false;
+            // 
+            // SubmitBtn
+            // 
+            this.SubmitBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SubmitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.SubmitBtn.FlatAppearance.BorderSize = 0;
+            this.SubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.SubmitBtn.ForeColor = System.Drawing.Color.White;
+            this.SubmitBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SubmitBtn.IconColor = System.Drawing.Color.Black;
+            this.SubmitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubmitBtn.Location = new System.Drawing.Point(535, 0);
+            this.SubmitBtn.Name = "SubmitBtn";
+            this.SubmitBtn.Size = new System.Drawing.Size(192, 94);
+            this.SubmitBtn.TabIndex = 24;
+            this.SubmitBtn.Text = "Submit";
+            this.SubmitBtn.UseVisualStyleBackColor = false;
+            this.SubmitBtn.Visible = false;
             // 
             // InspectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 781);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.TitlePnl);
             this.Controls.Add(this.iconButton1);
             this.MinimumSize = new System.Drawing.Size(816, 820);
             this.Name = "InspectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "inspectionForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.TitlePnl.ResumeLayout(false);
+            this.TitlePnl.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel TitlePnl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox commentBox;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Label FileNameTxt;
+        private System.Windows.Forms.TextBox CommentTxtBx;
+        private FontAwesome.Sharp.IconButton NextBtn;
+        private FontAwesome.Sharp.IconButton QuestionLbl;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton InterventionTxt;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton iconButton9;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private FontAwesome.Sharp.IconButton iconButton7;
+        private FontAwesome.Sharp.IconButton UploadImageBtn;
+        private System.Windows.Forms.CheckBox checkBox;
+        private FontAwesome.Sharp.IconButton CompletedTxt;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ActionTakenTxtBx;
         private System.Windows.Forms.Panel panel6;
+        private FontAwesome.Sharp.IconButton PreviousBtn;
+        private FontAwesome.Sharp.IconButton CategoryLbl;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton SubmitBtn;
     }
 }

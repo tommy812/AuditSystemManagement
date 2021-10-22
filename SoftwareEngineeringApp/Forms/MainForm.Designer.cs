@@ -47,16 +47,22 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.DefaultLogoPnl = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.AdminDashboardBtn = new FontAwesome.Sharp.IconButton();
             this.MenuPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.MenuPanel.Controls.Add(this.panel10);
+            this.MenuPanel.Controls.Add(this.AdminDashboardBtn);
             this.MenuPanel.Controls.Add(this.panel8);
             this.MenuPanel.Controls.Add(this.AddTemplateBtn);
             this.MenuPanel.Controls.Add(this.panel6);
@@ -98,7 +104,7 @@
             this.AddTemplateBtn.Name = "AddTemplateBtn";
             this.AddTemplateBtn.Size = new System.Drawing.Size(220, 60);
             this.AddTemplateBtn.TabIndex = 8;
-            this.AddTemplateBtn.Text = "Add Template";
+            this.AddTemplateBtn.Text = "Admin Add Template";
             this.AddTemplateBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddTemplateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddTemplateBtn.UseVisualStyleBackColor = false;
@@ -302,6 +308,48 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 323);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(220, 1);
+            this.panel10.TabIndex = 11;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(220, 1);
+            this.panel11.TabIndex = 7;
+            // 
+            // AdminDashboardBtn
+            // 
+            this.AdminDashboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.AdminDashboardBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdminDashboardBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AdminDashboardBtn.FlatAppearance.BorderSize = 0;
+            this.AdminDashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AdminDashboardBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminDashboardBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.AdminDashboardBtn.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.AdminDashboardBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(173)))), ((int)(((byte)(237)))));
+            this.AdminDashboardBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.AdminDashboardBtn.IconSize = 30;
+            this.AdminDashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AdminDashboardBtn.Location = new System.Drawing.Point(0, 263);
+            this.AdminDashboardBtn.Name = "AdminDashboardBtn";
+            this.AdminDashboardBtn.Size = new System.Drawing.Size(220, 60);
+            this.AdminDashboardBtn.TabIndex = 10;
+            this.AdminDashboardBtn.Text = "Admin Dashboard";
+            this.AdminDashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AdminDashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AdminDashboardBtn.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +368,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -344,5 +393,8 @@
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton AddTemplateBtn;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private FontAwesome.Sharp.IconButton AdminDashboardBtn;
     }
 }

@@ -16,5 +16,10 @@ namespace SoftwareEngineeringApp.Forms
         {
             InitializeComponent();
         }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+            PreviousBtn.Visible = true;
+        }
     }
 }

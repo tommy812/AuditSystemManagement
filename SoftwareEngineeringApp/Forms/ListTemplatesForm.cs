@@ -81,33 +81,13 @@ namespace SoftwareEngineeringApp.Forms
             return dtQuestions;
 
         }
-        //Activate Student Form Function
-        private Form ActiveForm = Form.ActiveForm;
-        MainForm main = new MainForm();
-
-        //openform
-        public void openForm(Form ToOpenForm)
-        {
-            if (ActiveForm != null)
-                ActiveForm.Close();
-            ActiveForm = ToOpenForm;
-            ToOpenForm.TopLevel = false;
-            ToOpenForm.FormBorderStyle = FormBorderStyle.None;
-            ToOpenForm.Dock = DockStyle.Fill;
-            main.DefaultLogoPnl.Controls.Add(ToOpenForm);
-            main.DefaultLogoPnl.Tag = ToOpenForm;
-            ToOpenForm.BringToFront();
-            ToOpenForm.Show();
-
-        }
     
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-            //openForm(new InspectionForm());
 
-            
+            InspectionForm form2 = new InspectionForm();
+            form2.Show();
 
         }
     }

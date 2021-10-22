@@ -49,18 +49,8 @@ namespace SoftwareEngineeringApp
         private void NewInspectionBtn_Click(object sender, EventArgs e)
         {
             openForm(new ListTemplatesForm());
-            ListTemplatesForm listForm = new ListTemplatesForm();
-            listForm.ContinueBtn.Click += ContinueBtn_Click;
-
-
+       
         }
-
-        private void ContinueBtn_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
- 
 
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -84,7 +74,6 @@ namespace SoftwareEngineeringApp
             openForm(new addtemplate());
         }
 
-        ListTemplatesForm listform;
         
     }
 
