@@ -250,6 +250,7 @@
             this.CategoryGrid.Size = new System.Drawing.Size(345, 294);
             this.CategoryGrid.TabIndex = 5;
             this.CategoryGrid.Visible = false;
+            this.CategoryGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CategoryGrid_CellClick);
             // 
             // panel5
             // 

@@ -46,12 +46,23 @@ namespace SoftwareEngineeringApp.Forms
             QuestionGrid.Visible = true;
             Int32.TryParse(TemplateGrid.Rows[e.RowIndex].Cells[0].Value.ToString(), out template_no);
             DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
-           // DataSet datasetCategory = dbConn.GetData("SELECT Category FROM Categories WHERE Template_ID = " + template_no + "");
             DataSet datasetCategory = dbConn.GetData("select DISTINCT c.Category_ID, Category from Categories c  inner join Questions cl  on c.Category_ID = cl.Category_ID where cl.Template_ID = " + template_no + " ORDER BY c.Category_ID ASC;");
             DataSet datasetQuestions = dbConn.GetData("SELECT Question, Category_ID FROM Questions WHERE Template_ID = " + template_no + " ORDER BY Category_ID ASC;");
             CategoryGrid.DataSource = datasetCategory.Tables[0];
             QuestionGrid.DataSource = datasetQuestions.Tables[0];
 
+        }
+
+        //populate questions gridview when with only questions contained in the category selected
+        private void CategoryGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int categoryID;
+            Int32.TryParse(CategoryGrid.Rows[e.RowIndex].Cells[0].Value.ToString(), out categoryID);
+
+            DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
+            
+            DataSet datasetQuestions = dbConn.GetData("SELECT Question, Category_ID FROM Questions WHERE Template_ID = " + template_no + " AND Category_ID = "+ categoryID + "  ORDER BY Category_ID ASC;");
+            QuestionGrid.DataSource = datasetQuestions.Tables[0];
         }
     }
   
