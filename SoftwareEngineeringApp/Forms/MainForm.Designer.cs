@@ -276,7 +276,7 @@
             this.TimeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TimeBtn.IconSize = 35;
             this.TimeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TimeBtn.Location = new System.Drawing.Point(216, 1);
+            this.TimeBtn.Location = new System.Drawing.Point(837, 1);
             this.TimeBtn.Name = "TimeBtn";
             this.TimeBtn.Size = new System.Drawing.Size(307, 50);
             this.TimeBtn.TabIndex = 3;
@@ -287,7 +287,7 @@
             // 
             // LocationBtn
             // 
-            this.LocationBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LocationBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.LocationBtn.FlatAppearance.BorderSize = 0;
             this.LocationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LocationBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -297,7 +297,7 @@
             this.LocationBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LocationBtn.IconSize = 35;
             this.LocationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LocationBtn.Location = new System.Drawing.Point(523, 1);
+            this.LocationBtn.Location = new System.Drawing.Point(311, 1);
             this.LocationBtn.Name = "LocationBtn";
             this.LocationBtn.Size = new System.Drawing.Size(310, 50);
             this.LocationBtn.TabIndex = 2;
@@ -308,7 +308,7 @@
             // 
             // UsernameBtn
             // 
-            this.UsernameBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UsernameBtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.UsernameBtn.FlatAppearance.BorderSize = 0;
             this.UsernameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UsernameBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,7 +318,7 @@
             this.UsernameBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.UsernameBtn.IconSize = 35;
             this.UsernameBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UsernameBtn.Location = new System.Drawing.Point(833, 1);
+            this.UsernameBtn.Location = new System.Drawing.Point(0, 1);
             this.UsernameBtn.Name = "UsernameBtn";
             this.UsernameBtn.Size = new System.Drawing.Size(311, 50);
             this.UsernameBtn.TabIndex = 1;

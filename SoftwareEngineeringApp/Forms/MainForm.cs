@@ -20,15 +20,15 @@ namespace SoftwareEngineeringApp
         
 
 
-        public MainForm()
+        public MainForm(string name, string surname, string role, string site )
         {
-            LogInForm log = new LogInForm();
-             User user = new User();
-            string name = log.user_name;
+            
             //MessageBox.Show(name);
             InitializeComponent();
             timer1.Start();
-           UsernameBtn.Text = name + " ciao " + user.Surname;
+           UsernameBtn.Text = "User: "+ name + " " + surname;
+
+            LocationBtn.Text = "Site: " + site;
         }
 
 

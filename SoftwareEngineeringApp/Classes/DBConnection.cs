@@ -33,6 +33,11 @@ namespace SoftwareEngineeringApp.Classes
             return _instance;
         }
 
+        public static SqlConnection connect() 
+        {
+            SqlConnection connToDB = new SqlConnection(dBConnectionString);
+            return connToDB;
+        }
 
         //returns dataset
         public DataSet GetData(string sqlQuery)
@@ -74,6 +79,27 @@ namespace SoftwareEngineeringApp.Classes
             }
 
                 return datatable;
+        }
+
+        public DataTable GetValueByID(string query, int id, string var)
+        {
+            
+            DataTable datatable = new DataTable();
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                //open connection
+                connToDB.Open();
+                using (datatable)
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, connToDB))
+                    {
+                        cmd.Parameters.AddWithValue(var, id);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(datatable);
+                    }
+                }
+            }
+            return datatable; 
         }
 
 

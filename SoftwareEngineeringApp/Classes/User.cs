@@ -18,6 +18,7 @@ namespace SoftwareEngineeringApp.Classes
         public string Password { set; get; }
         public Int32 Role { set; get; }
         public Int32 Site { set; get; }
+        public string SiteName { set; get; }
 
         public bool User_verification2()
         {
@@ -45,6 +46,7 @@ namespace SoftwareEngineeringApp.Classes
             bool exist;
             string dBConnectionString = Properties.Settings.Default.DBConnectionString;
             SqlConnection con = new SqlConnection(dBConnectionString);
+
             SqlDataReader rd;
             exist = false;
             using (var cmd = new SqlCommand())
@@ -65,9 +67,11 @@ namespace SoftwareEngineeringApp.Classes
                     Surname = rd.GetString(rd.GetOrdinal("Surname"));
                     Role = rd.GetInt32(rd.GetOrdinal("Role_ID"));
                     Site = rd.GetInt32(rd.GetOrdinal("Site_ID"));
+                    
                 }
                 if (rd.HasRows)
                 {
+                    SiteName = getSiteName(Site);
                     exist = true;
                 }
                     con.Close();
@@ -77,6 +81,22 @@ namespace SoftwareEngineeringApp.Classes
             return exist;
         }
 
+        public string getSiteName(int siteID)
+        {
+            string siteName = null;
+
+            string query = ("SELECT Site_Name FROM Sites WHERE Site_ID=@Site_ID");
+            DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
+            DataTable dataTableSite = dbConn.GetValueByID(query, siteID, "Site_ID");
+
+            if (dataTableSite.Rows.Count > 0)
+            {
+                DataRow row = dataTableSite.Rows[0];
+
+                siteName = row["Site_Name"].ToString();
+            }
+            return siteName;
+        }
 
     }
 }
