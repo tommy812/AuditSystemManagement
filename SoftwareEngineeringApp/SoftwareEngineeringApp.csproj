@@ -195,10 +195,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SoftwareEngineering.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SoftwareEngineering_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>SoftwareEngineering.mdf</DependentUpon>
     </Content>
   </ItemGroup>
