@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\FormInfo.cs" />
+    <Compile Include="Classes\QuestionAns.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Classes\DBConnection.cs" />

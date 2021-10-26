@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitlePnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.FileNameTxt = new System.Windows.Forms.Label();
@@ -39,6 +42,7 @@
             this.SubmitBtn = new FontAwesome.Sharp.IconButton();
             this.PreviousBtn = new FontAwesome.Sharp.IconButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.QuestionGrid = new System.Windows.Forms.DataGridView();
             this.CategoryLbl = new FontAwesome.Sharp.IconButton();
             this.InterventionTxt = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -50,11 +54,13 @@
             this.ActionTakenTxtBx = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.CategoriesLbl = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.TitlePnl.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuestionGrid)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -91,7 +97,7 @@
             // 
             this.FileNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FileNameTxt.AutoSize = true;
-            this.FileNameTxt.Location = new System.Drawing.Point(789, 53);
+            this.FileNameTxt.Location = new System.Drawing.Point(718, 49);
             this.FileNameTxt.Name = "FileNameTxt";
             this.FileNameTxt.Size = new System.Drawing.Size(51, 13);
             this.FileNameTxt.TabIndex = 26;
@@ -101,18 +107,18 @@
             // 
             this.CommentTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CommentTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CommentTxtBx.Location = new System.Drawing.Point(123, 35);
+            this.CommentTxtBx.Location = new System.Drawing.Point(49, 35);
             this.CommentTxtBx.Multiline = true;
             this.CommentTxtBx.Name = "CommentTxtBx";
             this.CommentTxtBx.Size = new System.Drawing.Size(723, 91);
             this.CommentTxtBx.TabIndex = 23;
             this.CommentTxtBx.Text = "Comments";
+            this.CommentTxtBx.Click += new System.EventHandler(this.CommentTxtBx_Click);
             // 
             // NextBtn
             // 
-            this.NextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.NextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.NextBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.NextBtn.FlatAppearance.BorderSize = 0;
             this.NextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.NextBtn.ForeColor = System.Drawing.Color.White;
@@ -121,7 +127,7 @@
             this.NextBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.NextBtn.Location = new System.Drawing.Point(1037, 0);
             this.NextBtn.Name = "NextBtn";
-            this.NextBtn.Size = new System.Drawing.Size(192, 94);
+            this.NextBtn.Size = new System.Drawing.Size(192, 88);
             this.NextBtn.TabIndex = 22;
             this.NextBtn.Text = "Next";
             this.NextBtn.UseVisualStyleBackColor = false;
@@ -138,7 +144,7 @@
             this.QuestionLbl.IconChar = FontAwesome.Sharp.IconChar.None;
             this.QuestionLbl.IconColor = System.Drawing.Color.Black;
             this.QuestionLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.QuestionLbl.Location = new System.Drawing.Point(123, 19);
+            this.QuestionLbl.Location = new System.Drawing.Point(49, 19);
             this.QuestionLbl.Name = "QuestionLbl";
             this.QuestionLbl.Size = new System.Drawing.Size(723, 55);
             this.QuestionLbl.TabIndex = 17;
@@ -159,20 +165,20 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
             this.panel2.Controls.Add(this.SubmitBtn);
             this.panel2.Controls.Add(this.PreviousBtn);
             this.panel2.Controls.Add(this.NextBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 687);
+            this.panel2.Location = new System.Drawing.Point(0, 693);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1229, 94);
+            this.panel2.Size = new System.Drawing.Size(1229, 88);
             this.panel2.TabIndex = 28;
             // 
             // SubmitBtn
             // 
             this.SubmitBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SubmitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.SubmitBtn.FlatAppearance.BorderSize = 0;
+            this.SubmitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.SubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.SubmitBtn.ForeColor = System.Drawing.Color.White;
@@ -181,7 +187,7 @@
             this.SubmitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmitBtn.Location = new System.Drawing.Point(535, 0);
             this.SubmitBtn.Name = "SubmitBtn";
-            this.SubmitBtn.Size = new System.Drawing.Size(192, 94);
+            this.SubmitBtn.Size = new System.Drawing.Size(192, 91);
             this.SubmitBtn.TabIndex = 24;
             this.SubmitBtn.Text = "Submit";
             this.SubmitBtn.UseVisualStyleBackColor = false;
@@ -189,9 +195,8 @@
             // 
             // PreviousBtn
             // 
-            this.PreviousBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.PreviousBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.PreviousBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PreviousBtn.FlatAppearance.BorderSize = 0;
             this.PreviousBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PreviousBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.PreviousBtn.ForeColor = System.Drawing.Color.White;
@@ -200,7 +205,7 @@
             this.PreviousBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.PreviousBtn.Location = new System.Drawing.Point(0, 0);
             this.PreviousBtn.Name = "PreviousBtn";
-            this.PreviousBtn.Size = new System.Drawing.Size(192, 94);
+            this.PreviousBtn.Size = new System.Drawing.Size(192, 88);
             this.PreviousBtn.TabIndex = 23;
             this.PreviousBtn.Text = "Previous";
             this.PreviousBtn.UseVisualStyleBackColor = false;
@@ -208,11 +213,58 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.QuestionGrid);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 140);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(322, 547);
+            this.panel8.Size = new System.Drawing.Size(445, 553);
             this.panel8.TabIndex = 29;
+            // 
+            // QuestionGrid
+            // 
+            this.QuestionGrid.AllowUserToAddRows = false;
+            this.QuestionGrid.AllowUserToDeleteRows = false;
+            this.QuestionGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.QuestionGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.QuestionGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.QuestionGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QuestionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.QuestionGrid.ColumnHeadersHeight = 30;
+            this.QuestionGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.QuestionGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QuestionGrid.EnableHeadersVisualStyles = false;
+            this.QuestionGrid.GridColor = System.Drawing.Color.SteelBlue;
+            this.QuestionGrid.Location = new System.Drawing.Point(0, 0);
+            this.QuestionGrid.Name = "QuestionGrid";
+            this.QuestionGrid.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.QuestionGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.QuestionGrid.RowHeadersVisible = false;
+            this.QuestionGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.QuestionGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.QuestionGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.QuestionGrid.Size = new System.Drawing.Size(445, 553);
+            this.QuestionGrid.TabIndex = 7;
+            this.QuestionGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QuestionGrid_CellClick);
             // 
             // CategoryLbl
             // 
@@ -225,7 +277,7 @@
             this.CategoryLbl.IconChar = FontAwesome.Sharp.IconChar.None;
             this.CategoryLbl.IconColor = System.Drawing.Color.Black;
             this.CategoryLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CategoryLbl.Location = new System.Drawing.Point(123, 20);
+            this.CategoryLbl.Location = new System.Drawing.Point(49, 20);
             this.CategoryLbl.Name = "CategoryLbl";
             this.CategoryLbl.Size = new System.Drawing.Size(723, 55);
             this.CategoryLbl.TabIndex = 17;
@@ -243,7 +295,7 @@
             this.InterventionTxt.IconChar = FontAwesome.Sharp.IconChar.None;
             this.InterventionTxt.IconColor = System.Drawing.Color.Black;
             this.InterventionTxt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.InterventionTxt.Location = new System.Drawing.Point(123, 25);
+            this.InterventionTxt.Location = new System.Drawing.Point(52, 21);
             this.InterventionTxt.Name = "InterventionTxt";
             this.InterventionTxt.Size = new System.Drawing.Size(167, 41);
             this.InterventionTxt.TabIndex = 18;
@@ -254,18 +306,18 @@
             // 
             this.panel4.Controls.Add(this.CategoryLbl);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(322, 140);
+            this.panel4.Location = new System.Drawing.Point(445, 140);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(907, 81);
+            this.panel4.Size = new System.Drawing.Size(784, 81);
             this.panel4.TabIndex = 30;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.QuestionLbl);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(322, 221);
+            this.panel5.Location = new System.Drawing.Point(445, 221);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(907, 80);
+            this.panel5.Size = new System.Drawing.Size(784, 80);
             this.panel5.TabIndex = 31;
             // 
             // UploadImageBtn
@@ -280,7 +332,7 @@
             this.UploadImageBtn.IconChar = FontAwesome.Sharp.IconChar.GalacticRepublic;
             this.UploadImageBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.UploadImageBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.UploadImageBtn.Location = new System.Drawing.Point(616, 25);
+            this.UploadImageBtn.Location = new System.Drawing.Point(545, 21);
             this.UploadImageBtn.Name = "UploadImageBtn";
             this.UploadImageBtn.Size = new System.Drawing.Size(167, 41);
             this.UploadImageBtn.TabIndex = 27;
@@ -290,7 +342,7 @@
             // checkBox
             // 
             this.checkBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkBox.Location = new System.Drawing.Point(578, 25);
+            this.checkBox.Location = new System.Drawing.Point(507, 21);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(19, 41);
             this.checkBox.TabIndex = 26;
@@ -307,7 +359,7 @@
             this.CompletedTxt.IconChar = FontAwesome.Sharp.IconChar.None;
             this.CompletedTxt.IconColor = System.Drawing.Color.Black;
             this.CompletedTxt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CompletedTxt.Location = new System.Drawing.Point(405, 25);
+            this.CompletedTxt.Location = new System.Drawing.Point(334, 21);
             this.CompletedTxt.Name = "CompletedTxt";
             this.CompletedTxt.Size = new System.Drawing.Size(167, 41);
             this.CompletedTxt.TabIndex = 25;
@@ -318,7 +370,7 @@
             // 
             this.interventiontxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.interventiontxtbx.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.interventiontxtbx.Location = new System.Drawing.Point(321, 25);
+            this.interventiontxtbx.Location = new System.Drawing.Point(250, 21);
             this.interventiontxtbx.MaxLength = 100;
             this.interventiontxtbx.Multiline = true;
             this.interventiontxtbx.Name = "interventiontxtbx";
@@ -331,12 +383,13 @@
             // 
             this.ActionTakenTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ActionTakenTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActionTakenTxtBx.Location = new System.Drawing.Point(123, 38);
+            this.ActionTakenTxtBx.Location = new System.Drawing.Point(49, 38);
             this.ActionTakenTxtBx.Multiline = true;
             this.ActionTakenTxtBx.Name = "ActionTakenTxtBx";
             this.ActionTakenTxtBx.Size = new System.Drawing.Size(723, 91);
             this.ActionTakenTxtBx.TabIndex = 24;
             this.ActionTakenTxtBx.Text = "Action Taken";
+            this.ActionTakenTxtBx.Click += new System.EventHandler(this.ActionTakenTxtBx_Click);
             // 
             // panel6
             // 
@@ -347,9 +400,9 @@
             this.panel6.Controls.Add(this.InterventionTxt);
             this.panel6.Controls.Add(this.interventiontxtbx);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(322, 301);
+            this.panel6.Location = new System.Drawing.Point(445, 301);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(907, 87);
+            this.panel6.Size = new System.Drawing.Size(784, 87);
             this.panel6.TabIndex = 32;
             // 
             // panel1
@@ -357,20 +410,10 @@
             this.panel1.Controls.Add(this.CategoriesLbl);
             this.panel1.Controls.Add(this.ActionTakenTxtBx);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(322, 388);
+            this.panel1.Location = new System.Drawing.Point(445, 388);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 135);
+            this.panel1.Size = new System.Drawing.Size(784, 135);
             this.panel1.TabIndex = 30;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.CommentTxtBx);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(322, 523);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(907, 164);
-            this.panel7.TabIndex = 33;
             // 
             // CategoriesLbl
             // 
@@ -378,12 +421,22 @@
             this.CategoriesLbl.AutoSize = true;
             this.CategoriesLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoriesLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.CategoriesLbl.Location = new System.Drawing.Point(119, 12);
+            this.CategoriesLbl.Location = new System.Drawing.Point(45, 12);
             this.CategoriesLbl.Name = "CategoriesLbl";
             this.CategoriesLbl.Size = new System.Drawing.Size(148, 23);
             this.CategoriesLbl.TabIndex = 25;
             this.CategoriesLbl.Text = "Actions Taken: ";
             this.CategoriesLbl.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.CommentTxtBx);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(445, 523);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(784, 164);
+            this.panel7.TabIndex = 33;
             // 
             // label2
             // 
@@ -391,7 +444,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.label2.Location = new System.Drawing.Point(124, 9);
+            this.label2.Location = new System.Drawing.Point(50, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 23);
             this.label2.TabIndex = 24;
@@ -420,6 +473,8 @@
             this.TitlePnl.ResumeLayout(false);
             this.TitlePnl.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QuestionGrid)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -459,5 +514,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label CategoriesLbl;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView QuestionGrid;
     }
 }
