@@ -102,6 +102,54 @@ namespace SoftwareEngineeringApp.Classes
             return datatable; 
         }
 
+        public int CountElements(string table)
+        {
+            int value = 0;
+            string query = "select count(*) from "+table+"";
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, connToDB))
+                {
+                    connToDB.Open();
+                    value = (int)cmd.ExecuteScalar();
+                }
+            }
+                return value;
+        }
+
+        public string[] ReturnAllByColumnName(string table, string columnName, string query)
+        {
+
+            DBConnection dbcon = DBConnection.getInstanceOfDBConnection();
+            int length = dbcon.CountElements(table);
+            string[] value;
+            value = new string[length];
+            SqlDataReader dt;
+           
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                
+                
+
+                using (SqlCommand cmd = new SqlCommand(query, connToDB))
+                {
+                    connToDB.Open();
+                    dt = cmd.ExecuteReader();
+                    int i = 0;
+                    while (dt.Read())
+                    {
+                        value[i] = dt[columnName].ToString();
+
+                        i++;
+
+                    }
+
+                }
+            }
+            
+
+            return value;
+        }
 
     }
 }

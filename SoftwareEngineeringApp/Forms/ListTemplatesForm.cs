@@ -32,7 +32,7 @@ namespace SoftwareEngineeringApp.Forms
         {
             this.Close();
 
-            InspectionForm form2 = new InspectionForm();
+            NewInspectionForm form2 = new NewInspectionForm(template_no);
             form2.Show();
 
         }
@@ -46,10 +46,9 @@ namespace SoftwareEngineeringApp.Forms
             QuestionGrid.Visible = true;
             Int32.TryParse(TemplateGrid.Rows[e.RowIndex].Cells[0].Value.ToString(), out template_no);
             DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
-            //            DataSet datasetCategory = dbConn.GetData("select DISTINCT c.Category_ID, Category from Categories c  inner join Questions cl  on c.Category_ID = cl.Category_ID where cl.Template_ID = " + template_no + " ORDER BY c.Category_ID ASC;");
+            
             DataSet datasetCategory = dbConn.GetData("select DISTINCT c.Category_ID, Category from Categories c  inner join Questions_Allocation cl  on c.Category_ID = cl.Category_ID where cl.Template_ID = " + template_no + " ORDER BY c.Category_ID ASC;");
 
-            //DataSet datasetQuestions = dbConn.GetData("SELECT Question, Category_ID FROM Questions WHERE Template_ID = " + template_no + " ORDER BY Category_ID ASC;");
 
             DataSet datasetQuestions = dbConn.GetData("SELECT DISTINCT q.Question, q.Category_ID FROM Questions q  inner join Questions_Allocation qa  on q.Category_ID = qa.Category_ID and qa.Template_ID = " + template_no + " ORDER BY q.Category_ID ASC;");
 
