@@ -17,7 +17,8 @@ namespace SoftwareEngineeringApp
 {
     public partial class MainForm : Form
     {
-        
+        string username;
+        string Site;
 
 
         public MainForm(string name, string surname, string role, string site )
@@ -26,7 +27,9 @@ namespace SoftwareEngineeringApp
             //MessageBox.Show(name);
             InitializeComponent();
             timer1.Start();
-           UsernameBtn.Text = "User: "+ name + " " + surname;
+            username = name + " " + surname;
+            Site = site;
+            UsernameBtn.Text = "User: "+ username;
 
             LocationBtn.Text = "Site: " + site;
         }
@@ -56,7 +59,7 @@ namespace SoftwareEngineeringApp
 
         private void NewInspectionBtn_Click(object sender, EventArgs e)
         {
-            openForm(new ListTemplatesForm());
+            openForm(new ListTemplatesForm(username, Site));
        
         }
 

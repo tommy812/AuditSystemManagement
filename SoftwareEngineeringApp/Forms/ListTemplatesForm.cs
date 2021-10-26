@@ -16,23 +16,27 @@ namespace SoftwareEngineeringApp.Forms
 {
     public partial class ListTemplatesForm : Form
     {
-        public int template_no = 0;
-        public ListTemplatesForm()
+        public string userName;
+        public string Site;
+        public int template_no = 1;
+        public ListTemplatesForm(string username, string site)
         {
             InitializeComponent();
-
+            Site = site;
+            userName = username;
             //Populate first gridview with the possible termplates
             DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
             DataSet datasetTemplates = dbConn.GetData("SELECT * FROM Template");
             TemplateGrid.DataSource = datasetTemplates.Tables[0];
+
         }
 
         //Open inspection form 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
 
-            NewInspectionForm form2 = new NewInspectionForm(template_no);
+            NewInspectionForm form2 = new NewInspectionForm(template_no, userName, Site);
             form2.Show();
 
         }

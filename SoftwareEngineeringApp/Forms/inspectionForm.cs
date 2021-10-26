@@ -12,7 +12,7 @@ namespace SoftwareEngineeringApp.Forms
 {
     public partial class InspectionForm : Form
     {
-        public InspectionForm(int templateId)
+        public InspectionForm(int templateId, int auditID, DateTime Date, string type, string supervisor, string inspector, string site, string workArea, string jobDescription)
         {
             InitializeComponent();
         }

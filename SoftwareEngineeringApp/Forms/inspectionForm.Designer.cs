@@ -38,7 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.SubmitBtn = new FontAwesome.Sharp.IconButton();
             this.PreviousBtn = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.CategoryLbl = new FontAwesome.Sharp.IconButton();
             this.InterventionTxt = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -50,13 +50,16 @@
             this.ActionTakenTxtBx = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.CategoriesLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.TitlePnl.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitlePnl
@@ -88,7 +91,7 @@
             // 
             this.FileNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FileNameTxt.AutoSize = true;
-            this.FileNameTxt.Location = new System.Drawing.Point(906, 55);
+            this.FileNameTxt.Location = new System.Drawing.Point(789, 53);
             this.FileNameTxt.Name = "FileNameTxt";
             this.FileNameTxt.Size = new System.Drawing.Size(51, 13);
             this.FileNameTxt.TabIndex = 26;
@@ -98,7 +101,7 @@
             // 
             this.CommentTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CommentTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CommentTxtBx.Location = new System.Drawing.Point(267, 23);
+            this.CommentTxtBx.Location = new System.Drawing.Point(123, 35);
             this.CommentTxtBx.Multiline = true;
             this.CommentTxtBx.Name = "CommentTxtBx";
             this.CommentTxtBx.Size = new System.Drawing.Size(723, 91);
@@ -127,7 +130,7 @@
             // QuestionLbl
             // 
             this.QuestionLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.QuestionLbl.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.QuestionLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.QuestionLbl.FlatAppearance.BorderSize = 0;
             this.QuestionLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QuestionLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
@@ -135,7 +138,7 @@
             this.QuestionLbl.IconChar = FontAwesome.Sharp.IconChar.None;
             this.QuestionLbl.IconColor = System.Drawing.Color.Black;
             this.QuestionLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.QuestionLbl.Location = new System.Drawing.Point(267, 6);
+            this.QuestionLbl.Location = new System.Drawing.Point(123, 19);
             this.QuestionLbl.Name = "QuestionLbl";
             this.QuestionLbl.Size = new System.Drawing.Size(723, 55);
             this.QuestionLbl.TabIndex = 17;
@@ -203,19 +206,18 @@
             this.PreviousBtn.UseVisualStyleBackColor = false;
             this.PreviousBtn.Visible = false;
             // 
-            // panel3
+            // panel8
             // 
-            this.panel3.Controls.Add(this.CategoryLbl);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 140);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1229, 69);
-            this.panel3.TabIndex = 29;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 140);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(322, 547);
+            this.panel8.TabIndex = 29;
             // 
             // CategoryLbl
             // 
             this.CategoryLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CategoryLbl.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.CategoryLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.CategoryLbl.FlatAppearance.BorderSize = 0;
             this.CategoryLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CategoryLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
@@ -223,7 +225,7 @@
             this.CategoryLbl.IconChar = FontAwesome.Sharp.IconChar.None;
             this.CategoryLbl.IconColor = System.Drawing.Color.Black;
             this.CategoryLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CategoryLbl.Location = new System.Drawing.Point(267, 11);
+            this.CategoryLbl.Location = new System.Drawing.Point(123, 20);
             this.CategoryLbl.Name = "CategoryLbl";
             this.CategoryLbl.Size = new System.Drawing.Size(723, 55);
             this.CategoryLbl.TabIndex = 17;
@@ -233,7 +235,7 @@
             // InterventionTxt
             // 
             this.InterventionTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.InterventionTxt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.InterventionTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.InterventionTxt.FlatAppearance.BorderSize = 0;
             this.InterventionTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InterventionTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
@@ -241,7 +243,7 @@
             this.InterventionTxt.IconChar = FontAwesome.Sharp.IconChar.None;
             this.InterventionTxt.IconColor = System.Drawing.Color.Black;
             this.InterventionTxt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.InterventionTxt.Location = new System.Drawing.Point(267, 27);
+            this.InterventionTxt.Location = new System.Drawing.Point(123, 25);
             this.InterventionTxt.Name = "InterventionTxt";
             this.InterventionTxt.Size = new System.Drawing.Size(167, 41);
             this.InterventionTxt.TabIndex = 18;
@@ -250,40 +252,35 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.QuestionLbl);
+            this.panel4.Controls.Add(this.CategoryLbl);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 209);
+            this.panel4.Location = new System.Drawing.Point(322, 140);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1229, 76);
+            this.panel4.Size = new System.Drawing.Size(907, 81);
             this.panel4.TabIndex = 30;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.UploadImageBtn);
-            this.panel5.Controls.Add(this.checkBox);
-            this.panel5.Controls.Add(this.CompletedTxt);
-            this.panel5.Controls.Add(this.interventiontxtbx);
-            this.panel5.Controls.Add(this.InterventionTxt);
-            this.panel5.Controls.Add(this.FileNameTxt);
+            this.panel5.Controls.Add(this.QuestionLbl);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 285);
+            this.panel5.Location = new System.Drawing.Point(322, 221);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1229, 100);
+            this.panel5.Size = new System.Drawing.Size(907, 80);
             this.panel5.TabIndex = 31;
             // 
             // UploadImageBtn
             // 
             this.UploadImageBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.UploadImageBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.UploadImageBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.UploadImageBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UploadImageBtn.FlatAppearance.BorderSize = 0;
             this.UploadImageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadImageBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.UploadImageBtn.ForeColor = System.Drawing.Color.White;
             this.UploadImageBtn.IconChar = FontAwesome.Sharp.IconChar.GalacticRepublic;
-            this.UploadImageBtn.IconColor = System.Drawing.Color.CornflowerBlue;
+            this.UploadImageBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.UploadImageBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.UploadImageBtn.Location = new System.Drawing.Point(733, 27);
+            this.UploadImageBtn.Location = new System.Drawing.Point(616, 25);
             this.UploadImageBtn.Name = "UploadImageBtn";
             this.UploadImageBtn.Size = new System.Drawing.Size(167, 41);
             this.UploadImageBtn.TabIndex = 27;
@@ -293,7 +290,7 @@
             // checkBox
             // 
             this.checkBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkBox.Location = new System.Drawing.Point(695, 27);
+            this.checkBox.Location = new System.Drawing.Point(578, 25);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(19, 41);
             this.checkBox.TabIndex = 26;
@@ -302,7 +299,7 @@
             // CompletedTxt
             // 
             this.CompletedTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CompletedTxt.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.CompletedTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.CompletedTxt.FlatAppearance.BorderSize = 0;
             this.CompletedTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CompletedTxt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
@@ -310,7 +307,7 @@
             this.CompletedTxt.IconChar = FontAwesome.Sharp.IconChar.None;
             this.CompletedTxt.IconColor = System.Drawing.Color.Black;
             this.CompletedTxt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CompletedTxt.Location = new System.Drawing.Point(522, 27);
+            this.CompletedTxt.Location = new System.Drawing.Point(405, 25);
             this.CompletedTxt.Name = "CompletedTxt";
             this.CompletedTxt.Size = new System.Drawing.Size(167, 41);
             this.CompletedTxt.TabIndex = 25;
@@ -321,7 +318,7 @@
             // 
             this.interventiontxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.interventiontxtbx.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.interventiontxtbx.Location = new System.Drawing.Point(440, 27);
+            this.interventiontxtbx.Location = new System.Drawing.Point(321, 25);
             this.interventiontxtbx.MaxLength = 100;
             this.interventiontxtbx.Multiline = true;
             this.interventiontxtbx.Name = "interventiontxtbx";
@@ -334,7 +331,7 @@
             // 
             this.ActionTakenTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ActionTakenTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActionTakenTxtBx.Location = new System.Drawing.Point(267, 18);
+            this.ActionTakenTxtBx.Location = new System.Drawing.Point(123, 38);
             this.ActionTakenTxtBx.Multiline = true;
             this.ActionTakenTxtBx.Name = "ActionTakenTxtBx";
             this.ActionTakenTxtBx.Size = new System.Drawing.Size(723, 91);
@@ -343,32 +340,76 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.ActionTakenTxtBx);
+            this.panel6.Controls.Add(this.UploadImageBtn);
+            this.panel6.Controls.Add(this.checkBox);
+            this.panel6.Controls.Add(this.FileNameTxt);
+            this.panel6.Controls.Add(this.CompletedTxt);
+            this.panel6.Controls.Add(this.InterventionTxt);
+            this.panel6.Controls.Add(this.interventiontxtbx);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 385);
+            this.panel6.Location = new System.Drawing.Point(322, 301);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1229, 133);
+            this.panel6.Size = new System.Drawing.Size(907, 87);
             this.panel6.TabIndex = 32;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CommentTxtBx);
+            this.panel1.Controls.Add(this.CategoriesLbl);
+            this.panel1.Controls.Add(this.ActionTakenTxtBx);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 518);
+            this.panel1.Location = new System.Drawing.Point(322, 388);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1229, 149);
+            this.panel1.Size = new System.Drawing.Size(907, 135);
             this.panel1.TabIndex = 30;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.CommentTxtBx);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(322, 523);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(907, 164);
+            this.panel7.TabIndex = 33;
+            // 
+            // CategoriesLbl
+            // 
+            this.CategoriesLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CategoriesLbl.AutoSize = true;
+            this.CategoriesLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoriesLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.CategoriesLbl.Location = new System.Drawing.Point(119, 12);
+            this.CategoriesLbl.Name = "CategoriesLbl";
+            this.CategoriesLbl.Size = new System.Drawing.Size(148, 23);
+            this.CategoriesLbl.TabIndex = 25;
+            this.CategoriesLbl.Text = "Actions Taken: ";
+            this.CategoriesLbl.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.label2.Location = new System.Drawing.Point(124, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 23);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Comments:";
+            this.label2.Visible = false;
             // 
             // InspectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1229, 781);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.TitlePnl);
             this.Controls.Add(this.iconButton1);
@@ -379,14 +420,14 @@
             this.TitlePnl.ResumeLayout(false);
             this.TitlePnl.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -401,7 +442,7 @@
         private FontAwesome.Sharp.IconButton QuestionLbl;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton InterventionTxt;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
@@ -415,5 +456,8 @@
         private FontAwesome.Sharp.IconButton CategoryLbl;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton SubmitBtn;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label CategoriesLbl;
+        private System.Windows.Forms.Label label2;
     }
 }
