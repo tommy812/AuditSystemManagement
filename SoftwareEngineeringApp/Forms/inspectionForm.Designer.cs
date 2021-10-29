@@ -54,9 +54,9 @@
             this.ActionTakenTxtBx = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CategoriesLbl = new System.Windows.Forms.Label();
+            this.ActionsLbl = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.CommentLbl = new System.Windows.Forms.Label();
             this.TitlePnl.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -407,7 +407,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CategoriesLbl);
+            this.panel1.Controls.Add(this.ActionsLbl);
             this.panel1.Controls.Add(this.ActionTakenTxtBx);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(445, 388);
@@ -415,22 +415,21 @@
             this.panel1.Size = new System.Drawing.Size(784, 135);
             this.panel1.TabIndex = 30;
             // 
-            // CategoriesLbl
+            // ActionsLbl
             // 
-            this.CategoriesLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CategoriesLbl.AutoSize = true;
-            this.CategoriesLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoriesLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.CategoriesLbl.Location = new System.Drawing.Point(45, 12);
-            this.CategoriesLbl.Name = "CategoriesLbl";
-            this.CategoriesLbl.Size = new System.Drawing.Size(148, 23);
-            this.CategoriesLbl.TabIndex = 25;
-            this.CategoriesLbl.Text = "Actions Taken: ";
-            this.CategoriesLbl.Visible = false;
+            this.ActionsLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ActionsLbl.AutoSize = true;
+            this.ActionsLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActionsLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.ActionsLbl.Location = new System.Drawing.Point(45, 12);
+            this.ActionsLbl.Name = "ActionsLbl";
+            this.ActionsLbl.Size = new System.Drawing.Size(148, 23);
+            this.ActionsLbl.TabIndex = 25;
+            this.ActionsLbl.Text = "Actions Taken: ";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.CommentLbl);
             this.panel7.Controls.Add(this.CommentTxtBx);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(445, 523);
@@ -438,18 +437,17 @@
             this.panel7.Size = new System.Drawing.Size(784, 164);
             this.panel7.TabIndex = 33;
             // 
-            // label2
+            // CommentLbl
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.label2.Location = new System.Drawing.Point(50, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 23);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Comments:";
-            this.label2.Visible = false;
+            this.CommentLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CommentLbl.AutoSize = true;
+            this.CommentLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CommentLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.CommentLbl.Location = new System.Drawing.Point(50, 9);
+            this.CommentLbl.Name = "CommentLbl";
+            this.CommentLbl.Size = new System.Drawing.Size(115, 23);
+            this.CommentLbl.TabIndex = 24;
+            this.CommentLbl.Text = "Comments:";
             // 
             // InspectionForm
             // 
@@ -512,8 +510,8 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton SubmitBtn;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label CategoriesLbl;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ActionsLbl;
+        private System.Windows.Forms.Label CommentLbl;
         private System.Windows.Forms.DataGridView QuestionGrid;
     }
 }
