@@ -33,8 +33,9 @@
             this.SelectTemplateLbl = new System.Windows.Forms.Label();
             this.QuestionsLbl = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.addbtn = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cancelbtn = new System.Windows.Forms.Button();
+            this.addquestion = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +81,7 @@
             this.QuestionsLbl.AutoSize = true;
             this.QuestionsLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuestionsLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.QuestionsLbl.Location = new System.Drawing.Point(495, 226);
+            this.QuestionsLbl.Location = new System.Drawing.Point(495, 244);
             this.QuestionsLbl.Name = "QuestionsLbl";
             this.QuestionsLbl.Size = new System.Drawing.Size(104, 23);
             this.QuestionsLbl.TabIndex = 6;
@@ -97,33 +98,44 @@
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "COMMENT";
             // 
-            // addbtn
+            // cancelbtn
             // 
-            this.addbtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addbtn.Location = new System.Drawing.Point(848, 326);
-            this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(105, 22);
-            this.addbtn.TabIndex = 8;
-            this.addbtn.Text = "+ Add Question";
-            this.addbtn.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.cancelbtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelbtn.Location = new System.Drawing.Point(945, 445);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelbtn.TabIndex = 14;
+            this.cancelbtn.Text = "Cancel";
+            this.cancelbtn.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // addquestion
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(876, 445);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(63, 22);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "Save";
-            this.textBox3.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.addquestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addquestion.Location = new System.Drawing.Point(864, 314);
+            this.addquestion.Name = "addquestion";
+            this.addquestion.Size = new System.Drawing.Size(156, 23);
+            this.addquestion.TabIndex = 15;
+            this.addquestion.Text = "+ Add Question";
+            this.addquestion.UseVisualStyleBackColor = true;
+            // 
+            // savebtn
+            // 
+            this.savebtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebtn.Location = new System.Drawing.Point(864, 445);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(75, 23);
+            this.savebtn.TabIndex = 16;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = true;
             // 
             // addtemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 608);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.addbtn);
+            this.ClientSize = new System.Drawing.Size(1038, 645);
+            this.Controls.Add(this.savebtn);
+            this.Controls.Add(this.addquestion);
+            this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.QuestionsLbl);
             this.Controls.Add(this.SelectTemplateLbl);
@@ -144,7 +156,8 @@
         private System.Windows.Forms.Label SelectTemplateLbl;
         private System.Windows.Forms.Label QuestionsLbl;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox addbtn;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button cancelbtn;
+        private System.Windows.Forms.Button addquestion;
+        private System.Windows.Forms.Button savebtn;
     }
 }
