@@ -277,7 +277,7 @@
             this.CategoryLbl.IconChar = FontAwesome.Sharp.IconChar.None;
             this.CategoryLbl.IconColor = System.Drawing.Color.Black;
             this.CategoryLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CategoryLbl.Location = new System.Drawing.Point(49, 20);
+            this.CategoryLbl.Location = new System.Drawing.Point(46, 6);
             this.CategoryLbl.Name = "CategoryLbl";
             this.CategoryLbl.Size = new System.Drawing.Size(723, 55);
             this.CategoryLbl.TabIndex = 17;
