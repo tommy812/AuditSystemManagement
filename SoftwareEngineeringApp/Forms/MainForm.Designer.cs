@@ -118,6 +118,7 @@
             this.AdminDashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AdminDashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AdminDashboardBtn.UseVisualStyleBackColor = false;
+            this.AdminDashboardBtn.Click += new System.EventHandler(this.AdminDashboardBtn_Click);
             // 
             // panel8
             // 

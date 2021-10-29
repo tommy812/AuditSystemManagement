@@ -85,7 +85,10 @@ namespace SoftwareEngineeringApp
             openForm(new addtemplate());
         }
 
-      
+        private void AdminDashboardBtn_Click(object sender, EventArgs e)
+        {
+            openForm(new Dashboard());
+        }
     }
 
     
