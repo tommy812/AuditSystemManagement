@@ -32,6 +32,12 @@ namespace SoftwareEngineeringApp
             UsernameBtn.Text = "User: "+ username;
 
             LocationBtn.Text = "Site: " + site;
+            if (role == "SuperUser" || role == "Manager")
+            {
+                AddTemplateBtn.Visible = true;
+                AdminDashboardBtn.Visible = true;
+            }
+            
         }
 
 
