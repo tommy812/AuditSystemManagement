@@ -36,7 +36,7 @@
             this.environmental = new System.Windows.Forms.Button();
             this.protection_indiv = new System.Windows.Forms.Button();
             this.equipments = new System.Windows.Forms.Button();
-            this.miscellaneous = new System.Windows.Forms.Button();
+            this.MenageUsersBtn = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -130,15 +130,16 @@
             this.equipments.Text = "Tools, Cables & other Equipment";
             this.equipments.UseVisualStyleBackColor = true;
             // 
-            // miscellaneous
+            // MenageUsersBtn
             // 
-            this.miscellaneous.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.miscellaneous.Location = new System.Drawing.Point(318, 345);
-            this.miscellaneous.Name = "miscellaneous";
-            this.miscellaneous.Size = new System.Drawing.Size(141, 54);
-            this.miscellaneous.TabIndex = 10;
-            this.miscellaneous.Text = "Miscellaneous";
-            this.miscellaneous.UseVisualStyleBackColor = true;
+            this.MenageUsersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenageUsersBtn.Location = new System.Drawing.Point(318, 425);
+            this.MenageUsersBtn.Name = "MenageUsersBtn";
+            this.MenageUsersBtn.Size = new System.Drawing.Size(141, 54);
+            this.MenageUsersBtn.TabIndex = 10;
+            this.MenageUsersBtn.Text = "Do not delete this button";
+            this.MenageUsersBtn.UseVisualStyleBackColor = true;
+            this.MenageUsersBtn.Click += new System.EventHandler(this.MenageUsersBtn_Click);
             // 
             // Back
             // 
@@ -184,7 +185,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Back);
-            this.Controls.Add(this.miscellaneous);
+            this.Controls.Add(this.MenageUsersBtn);
             this.Controls.Add(this.equipments);
             this.Controls.Add(this.protection_indiv);
             this.Controls.Add(this.environmental);
@@ -211,7 +212,7 @@
         private System.Windows.Forms.Button environmental;
         private System.Windows.Forms.Button protection_indiv;
         private System.Windows.Forms.Button equipments;
-        private System.Windows.Forms.Button miscellaneous;
+        private System.Windows.Forms.Button MenageUsersBtn;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.TextBox textBox1;

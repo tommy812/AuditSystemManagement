@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftwareEngineeringApp.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,14 @@ namespace SoftwareEngineeringApp
         private void Working_stand_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // Thomas made this button to develope a new form 
+        //Do not delete the button code Please :)
+        private void MenageUsersBtn_Click(object sender, EventArgs e)
+        {
+            MenageUsersForm form2 = new MenageUsersForm();
+            form2.Show();
         }
     }
 }
