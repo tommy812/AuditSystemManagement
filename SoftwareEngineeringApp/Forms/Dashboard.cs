@@ -17,9 +17,9 @@ namespace SoftwareEngineeringApp
         public Dashboard()
         {
             InitializeComponent();
-            DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
+          /*  DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
             DataSet datasetTemplates = dbConn.GetData("select audit.audit_ID, audit.date, audit.completed_by, audit.site_ID, audit.area_ID, audit.supervisor_ID, audit.ispector_ID, audit.type_ID, audit.template_ID FROM audit INNER JOIN  ON  = audit.id INNER JOIN ON call.call_outcome_id = call_outcome.id ORDER BY call.start_time ASC");
-
+*/
         }
 
         
