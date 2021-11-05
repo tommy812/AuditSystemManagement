@@ -93,8 +93,9 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(242, 277);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(628, 31);
+            this.textBox1.Size = new System.Drawing.Size(616, 76);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "COMMENT";
             // 
@@ -107,11 +108,12 @@
             this.cancelbtn.TabIndex = 14;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
+            this.cancelbtn.Click += new System.EventHandler(this.Cancelbtn_Click);
             // 
             // addquestion
             // 
             this.addquestion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addquestion.Location = new System.Drawing.Point(864, 314);
+            this.addquestion.Location = new System.Drawing.Point(864, 330);
             this.addquestion.Name = "addquestion";
             this.addquestion.Size = new System.Drawing.Size(156, 23);
             this.addquestion.TabIndex = 15;
@@ -127,6 +129,7 @@
             this.savebtn.TabIndex = 16;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // addtemplate
             // 

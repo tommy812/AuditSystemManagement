@@ -41,5 +41,24 @@ namespace SoftwareEngineeringApp.Forms
         {
 
         }
+
+        private void Savebtn_Click(object sender, EventArgs e)
+        {
+            saveMethod();
+
+        }
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
+        {
+            cancelMethod(); base.Properties.SetObject(Cancelbtn_Click);
+            if ((value != null) {
+                value.DialogResult = DialogResult.Cancel;
+
+            }
+               
+            }
+        }
+        private void saveMethod();
+        private void cancelMethod();
     }
 }
