@@ -30,18 +30,17 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.working_stand = new System.Windows.Forms.Button();
-            this.quality = new System.Windows.Forms.Button();
-            this.site_rules = new System.Windows.Forms.Button();
-            this.environmental = new System.Windows.Forms.Button();
-            this.protection_indiv = new System.Windows.Forms.Button();
-            this.equipments = new System.Windows.Forms.Button();
-            this.MenageUsersBtn = new System.Windows.Forms.Button();
-            this.Back = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Total = new System.Windows.Forms.Label();
+            this.btnWorkStnd = new System.Windows.Forms.Button();
+            this.btnSiteRule = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,8 +49,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 140);
+            this.panel1.Size = new System.Drawing.Size(1493, 172);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -61,142 +61,142 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(341, 46);
+            this.label1.Location = new System.Drawing.Point(588, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 44);
+            this.label1.Size = new System.Drawing.Size(454, 57);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Dashboard ";
+            this.label1.Text = "Admin Dashboard ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // working_stand
-            // 
-            this.working_stand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.working_stand.Location = new System.Drawing.Point(89, 182);
-            this.working_stand.Name = "working_stand";
-            this.working_stand.Size = new System.Drawing.Size(141, 63);
-            this.working_stand.TabIndex = 4;
-            this.working_stand.Text = "Working Standards";
-            this.working_stand.UseVisualStyleBackColor = true;
-            this.working_stand.Click += new System.EventHandler(this.Working_stand_Click);
-            // 
-            // quality
-            // 
-            this.quality.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quality.Location = new System.Drawing.Point(89, 265);
-            this.quality.Name = "quality";
-            this.quality.Size = new System.Drawing.Size(141, 54);
-            this.quality.TabIndex = 5;
-            this.quality.Text = "Quality";
-            this.quality.UseVisualStyleBackColor = true;
-            // 
-            // site_rules
-            // 
-            this.site_rules.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.site_rules.Location = new System.Drawing.Point(89, 345);
-            this.site_rules.Name = "site_rules";
-            this.site_rules.Size = new System.Drawing.Size(141, 54);
-            this.site_rules.TabIndex = 6;
-            this.site_rules.Text = "Site Rules";
-            this.site_rules.UseVisualStyleBackColor = true;
-            // 
-            // environmental
-            // 
-            this.environmental.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.environmental.Location = new System.Drawing.Point(89, 425);
-            this.environmental.Name = "environmental";
-            this.environmental.Size = new System.Drawing.Size(141, 54);
-            this.environmental.TabIndex = 7;
-            this.environmental.Text = "Environmental";
-            this.environmental.UseVisualStyleBackColor = true;
-            // 
-            // protection_indiv
-            // 
-            this.protection_indiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.protection_indiv.Location = new System.Drawing.Point(318, 182);
-            this.protection_indiv.Name = "protection_indiv";
-            this.protection_indiv.Size = new System.Drawing.Size(141, 63);
-            this.protection_indiv.TabIndex = 8;
-            this.protection_indiv.Text = "Protection Of Individuals";
-            this.protection_indiv.UseVisualStyleBackColor = true;
-            // 
-            // equipments
-            // 
-            this.equipments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equipments.Location = new System.Drawing.Point(318, 265);
-            this.equipments.Name = "equipments";
-            this.equipments.Size = new System.Drawing.Size(141, 54);
-            this.equipments.TabIndex = 9;
-            this.equipments.Text = "Tools, Cables & other Equipment";
-            this.equipments.UseVisualStyleBackColor = true;
-            // 
-            // MenageUsersBtn
-            // 
-            this.MenageUsersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenageUsersBtn.Location = new System.Drawing.Point(318, 425);
-            this.MenageUsersBtn.Name = "MenageUsersBtn";
-            this.MenageUsersBtn.Size = new System.Drawing.Size(141, 54);
-            this.MenageUsersBtn.TabIndex = 10;
-            this.MenageUsersBtn.Text = "Do not delete this button";
-            this.MenageUsersBtn.UseVisualStyleBackColor = true;
-            this.MenageUsersBtn.Click += new System.EventHandler(this.MenageUsersBtn_Click);
-            // 
-            // Back
-            // 
-            this.Back.Location = new System.Drawing.Point(589, 425);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(83, 28);
-            this.Back.TabIndex = 11;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(701, 425);
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Exit.Location = new System.Drawing.Point(924, 837);
+            this.Exit.Margin = new System.Windows.Forms.Padding(4);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(69, 27);
+            this.Exit.Size = new System.Drawing.Size(230, 87);
             this.Exit.TabIndex = 12;
             this.Exit.Text = "Exit";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // textBox1
+            // btnWorkStnd
             // 
-            this.textBox1.Location = new System.Drawing.Point(701, 209);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
+            this.btnWorkStnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnWorkStnd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWorkStnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWorkStnd.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.btnWorkStnd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnWorkStnd.Location = new System.Drawing.Point(980, 329);
+            this.btnWorkStnd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnWorkStnd.Name = "btnWorkStnd";
+            this.btnWorkStnd.Size = new System.Drawing.Size(237, 71);
+            this.btnWorkStnd.TabIndex = 13;
+            this.btnWorkStnd.Text = "Statistics";
+            this.btnWorkStnd.UseVisualStyleBackColor = false;
             // 
-            // Total
+            // btnSiteRule
             // 
-            this.Total.AutoSize = true;
-            this.Total.Location = new System.Drawing.Point(637, 212);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(31, 13);
-            this.Total.TabIndex = 14;
-            this.Total.Text = "Total";
+            this.btnSiteRule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnSiteRule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiteRule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiteRule.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.btnSiteRule.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSiteRule.Location = new System.Drawing.Point(283, 329);
+            this.btnSiteRule.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSiteRule.Name = "btnSiteRule";
+            this.btnSiteRule.Size = new System.Drawing.Size(237, 71);
+            this.btnSiteRule.TabIndex = 15;
+            this.btnSiteRule.Text = "List of reports";
+            this.btnSiteRule.UseVisualStyleBackColor = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(25, 417);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(50);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(707, 405);
+            this.flowLayoutPanel1.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(383, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(843, 37);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Select one of the following options to generate a PDF file:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button8.Location = new System.Drawing.Point(648, 837);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(222, 87);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "Back";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(744, 417);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(50);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(707, 405);
+            this.flowLayoutPanel2.TabIndex = 21;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(53, 53);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(639, 322);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 521);
-            this.Controls.Add(this.Total);
-            this.Controls.Add(this.textBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.ClientSize = new System.Drawing.Size(1493, 951);
+            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.btnSiteRule);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnWorkStnd);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Exit);
-            this.Controls.Add(this.Back);
-            this.Controls.Add(this.MenageUsersBtn);
-            this.Controls.Add(this.equipments);
-            this.Controls.Add(this.protection_indiv);
-            this.Controls.Add(this.environmental);
-            this.Controls.Add(this.site_rules);
-            this.Controls.Add(this.quality);
-            this.Controls.Add(this.working_stand);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,17 +206,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button working_stand;
-        private System.Windows.Forms.Button quality;
-        private System.Windows.Forms.Button site_rules;
-        private System.Windows.Forms.Button environmental;
-        private System.Windows.Forms.Button protection_indiv;
-        private System.Windows.Forms.Button equipments;
-        private System.Windows.Forms.Button MenageUsersBtn;
-        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Exit;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.Button btnWorkStnd;
+        private System.Windows.Forms.Button btnSiteRule;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }
 
