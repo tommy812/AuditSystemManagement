@@ -13,6 +13,8 @@ namespace SoftwareEngineeringApp.Forms
 {
     public partial class InspectionForm : Form
     {
+
+
         string Category;
         string question;
         List<QuestionAns> QAnswer = new List<QuestionAns>(); 
@@ -32,6 +34,16 @@ namespace SoftwareEngineeringApp.Forms
         private void NextBtn_Click(object sender, EventArgs e)
         {
             PreviousBtn.Visible = true;
+            int questionID = (int)QuestionGrid.Rows[1].Cells[0].Value;
+
+            int interventionNo = int.Parse(interventiontxtbx.Text);
+            bool completed = checkBox.Checked;
+            string action = ActionTakenTxtBx.Text;
+            string comments = CommentTxtBx.Text;
+
+            saveQuestion(questionID,interventionNo, completed, action, comments); 
+
+
         }
 
         private void ActionTakenTxtBx_Click(object sender, EventArgs e)
