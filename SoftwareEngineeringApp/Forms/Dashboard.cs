@@ -20,7 +20,7 @@ namespace SoftwareEngineeringApp
             InitializeComponent();
             DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
             DataSet datasetTemplates = dbConn.GetData("select audit.audit_ID, audit.date, audit.completed_by, audit.site_ID, audit.area_ID, audit.supervisor_ID, audit.ispector_ID, audit.type_ID, audit.template_ID FROM site INNER JOIN audit.site_ID ON  = audit.site_ID INNER JOIN audit.area_ID ON = audit.area_ID INNER JOIN audit.inspector_ID ON = audit.inspector_ID INNER JOIN audit.type_ID ON = audit.type_ID INNER JOIN audit.template_ID ON = audit.template_ID ORDER BY audit_ID ASC");
-*/
+
         }
 
         
