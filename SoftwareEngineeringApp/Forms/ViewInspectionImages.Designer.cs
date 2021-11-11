@@ -45,18 +45,18 @@ namespace SoftwareEngineeringApp.Forms
             // lblViewImage
             // 
             this.lblViewImage.AutoSize = true;
-            this.lblViewImage.Location = new System.Drawing.Point(244, 87);
+            this.lblViewImage.Location = new System.Drawing.Point(217, 88);
             this.lblViewImage.Name = "lblViewImage";
-            this.lblViewImage.Size = new System.Drawing.Size(99, 20);
+            this.lblViewImage.Size = new System.Drawing.Size(120, 20);
             this.lblViewImage.TabIndex = 1;
-            this.lblViewImage.Text = "ViewImages";
+            this.lblViewImage.Text = "Show a picture";
             this.lblViewImage.Click += new System.EventHandler(this.lblViewImage_Click);
             // 
             // viewInspectionImages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1680, 1055);
             this.Controls.Add(this.lblViewImage);
             this.Controls.Add(this.btnViewImages);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
