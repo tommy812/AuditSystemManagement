@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nextbtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Exitbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +93,7 @@
             // savebtn
             // 
             this.savebtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.savebtn.Location = new System.Drawing.Point(778, 557);
+            this.savebtn.Location = new System.Drawing.Point(823, 557);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(75, 23);
             this.savebtn.TabIndex = 16;
@@ -116,7 +117,7 @@
             // nextbtn
             // 
             this.nextbtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextbtn.Location = new System.Drawing.Point(859, 557);
+            this.nextbtn.Location = new System.Drawing.Point(904, 557);
             this.nextbtn.Name = "nextbtn";
             this.nextbtn.Size = new System.Drawing.Size(71, 23);
             this.nextbtn.TabIndex = 18;
@@ -134,11 +135,23 @@
             this.textBox1.TabIndex = 19;
             this.textBox1.Text = "Answer:";
             // 
+            // Exitbtn
+            // 
+            this.Exitbtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exitbtn.Location = new System.Drawing.Point(904, 155);
+            this.Exitbtn.Name = "Exitbtn";
+            this.Exitbtn.Size = new System.Drawing.Size(71, 23);
+            this.Exitbtn.TabIndex = 20;
+            this.Exitbtn.Text = "Exit Page ";
+            this.Exitbtn.UseVisualStyleBackColor = true;
+            this.Exitbtn.Click += new System.EventHandler(this.Exitbtn);
+            // 
             // addtemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 645);
+            this.Controls.Add(this.Exitbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.nextbtn);
             this.Controls.Add(this.label2);
@@ -165,5 +178,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button nextbtn;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Exitbtn;
     }
 }

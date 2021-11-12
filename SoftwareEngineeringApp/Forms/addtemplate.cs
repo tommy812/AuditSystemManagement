@@ -79,5 +79,10 @@ namespace SoftwareEngineeringApp.Forms
         {
 
         }
+
+        private void Exitbtn(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
