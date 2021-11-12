@@ -67,5 +67,17 @@ namespace SoftwareEngineeringApp.Forms
         {
 
         }
+
+        
+
+        private void TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nextbtn(object sender, EventArgs e)
+        {
+
+        }
     }
 }
