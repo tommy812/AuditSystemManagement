@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuPanel = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -362,10 +363,11 @@
             this.Controls.Add(this.DefaultLogoPnl);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.MenuPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1380, 873);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Musk Process Services";
             this.MenuPanel.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
