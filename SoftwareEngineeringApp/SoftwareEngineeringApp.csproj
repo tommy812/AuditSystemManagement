@@ -124,6 +124,18 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dashboards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboards.Designer.cs">
+      <DependentUpon>Dashboards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewInspectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewInspectionForm.Designer.cs">
+      <DependentUpon>ViewInspectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ViewInspectionImages.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboards.resx">
+      <DependentUpon>Dashboards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewInspectionForm.resx">
+      <DependentUpon>ViewInspectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewInspectionImages.resx">
       <DependentUpon>ViewInspectionImages.cs</DependentUpon>
