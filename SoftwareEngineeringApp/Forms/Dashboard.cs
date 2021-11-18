@@ -32,5 +32,29 @@ namespace SoftwareEngineeringApp.Forms
             ViewInspectionForm form2 = new ViewInspectionForm(audit_no);
             form2.Show();
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            chart1.Series[0].XValueMember = "Interventions";
+            chart1.Series[0].YValueMembers = "Interventions";
+
+            chart1.Series[1].XValueMember = "Inspections";
+            chart1.Series[1].YValueMembers = "Inspections";
+
+            chart1.DataSource = SoftwareEngineeringDataSet.audit;
+            chart1.DataBind();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'softwareEngineeringDataSet.Audit' table. You can move, or remove it, as needed.
+            this.auditTableAdapter.Fill(this.softwareEngineeringDataSet.Audit);
+
+        }
     }
 }
