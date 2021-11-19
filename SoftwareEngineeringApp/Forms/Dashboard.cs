@@ -46,15 +46,55 @@ namespace SoftwareEngineeringApp.Forms
             chart1.Series[1].XValueMember = "Inspections";
             chart1.Series[1].YValueMembers = "Inspections";
 
-            chart1.DataSource = SoftwareEngineeringDataSet.audit;
-            chart1.DataBind();
+          
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'softwareEngineeringDataSet.Audit' table. You can move, or remove it, as needed.
-            this.auditTableAdapter.Fill(this.softwareEngineeringDataSet.Audit);
+            ChartLoad();
 
         }
+
+        private void ChartLoad()
+        {
+            var chart = chart1.ChartAreas[0];
+            chart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+
+            chart.AxisX.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.Format = "";
+            chart.AxisY.LabelStyle.IsEndLabelVisible = true;
+
+            chart.AxisX.Minimum = 0;
+            chart.AxisY.Minimum = 0;
+
+            chart.AxisX.Interval = 0.5;
+            chart.AxisY.Interval = 10;
+
+            chart1.Series[0].IsVisibleInLegend = false;
+
+            chart1.Series.Add("Interventions");
+            chart1.Series["Interventions"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chart1.Series["Interventions"].Color= Color.Blue;
+
+            chart1.Series.Add("Inspections");
+            chart1.Series["Inspections"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chart1.Series["Inspections"].Color = Color.Red;
+
+
+            chart1.Series["Interventions"].Points.AddXY(1, 2);
+            chart1.Series["Interventions"].Points.AddXY(1, 2);
+            chart1.Series["Interventions"].Points.AddXY(1, 2);
+            chart1.Series["Interventions"].Points.AddXY(1, 2);
+            chart1.Series["Interventions"].Points.AddXY(1, 2);
+
+
+            chart1.Series["Inspections"].Points.AddXY(1, 2);
+            chart1.Series["Inspections"].Points.AddXY(1, 2);
+            chart1.Series["Inspections"].Points.AddXY(1, 2);
+            chart1.Series["Inspections"].Points.AddXY(1, 2);
+            chart1.Series["Inspections"].Points.AddXY(1, 2);
+        }
+
+
     }
 }

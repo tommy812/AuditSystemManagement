@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,35 +43,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.softwareEngineeringDataSet = new SoftwareEngineeringApp.SoftwareEngineeringDataSet();
-            this.auditBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.auditTableAdapter = new SoftwareEngineeringApp.SoftwareEngineeringDataSetTableAdapters.AuditTableAdapter();
-            this.auditIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.questionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.interventionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.completedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actiontakenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.categoryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListGridView)).BeginInit();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.softwareEngineeringDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,9 +71,8 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1891, 986);
+            this.panel1.Size = new System.Drawing.Size(1418, 801);
             this.panel1.TabIndex = 0;
             // 
             // panel4
@@ -95,10 +81,9 @@
             this.panel4.Controls.Add(this.flowLayoutPanel1);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 172);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(0, 140);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1124, 727);
+            this.panel4.Size = new System.Drawing.Size(843, 590);
             this.panel4.TabIndex = 3;
             // 
             // nReports
@@ -106,9 +91,10 @@
             this.nReports.AutoSize = true;
             this.nReports.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.nReports.ForeColor = System.Drawing.Color.Gainsboro;
-            this.nReports.Location = new System.Drawing.Point(29, 654);
+            this.nReports.Location = new System.Drawing.Point(22, 531);
+            this.nReports.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nReports.Name = "nReports";
-            this.nReports.Size = new System.Drawing.Size(285, 37);
+            this.nReports.Size = new System.Drawing.Size(234, 30);
             this.nReports.TabIndex = 25;
             this.nReports.Text = "Number of reports:";
             // 
@@ -116,17 +102,16 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.flowLayoutPanel1.Controls.Add(this.ListGridView);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 153);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 124);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1055, 463);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(791, 376);
             this.flowLayoutPanel1.TabIndex = 23;
             // 
             // ListGridView
             // 
             this.ListGridView.AllowUserToAddRows = false;
             this.ListGridView.AllowUserToDeleteRows = false;
-            this.ListGridView.AutoGenerateColumns = false;
             this.ListGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ListGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ListGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -141,20 +126,9 @@
             this.ListGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ListGridView.ColumnHeadersHeight = 30;
             this.ListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.ListGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.auditIDDataGridViewTextBoxColumn,
-            this.questionIDDataGridViewTextBoxColumn,
-            this.interventionsDataGridViewTextBoxColumn,
-            this.commentDataGridViewTextBoxColumn,
-            this.completedDataGridViewTextBoxColumn,
-            this.actiontakenDataGridViewTextBoxColumn,
-            this.imageDataGridViewImageColumn,
-            this.categoryIDDataGridViewTextBoxColumn});
-            this.ListGridView.DataSource = this.auditBindingSource;
             this.ListGridView.EnableHeadersVisualStyles = false;
             this.ListGridView.GridColor = System.Drawing.Color.SteelBlue;
-            this.ListGridView.Location = new System.Drawing.Point(4, 4);
-            this.ListGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ListGridView.Location = new System.Drawing.Point(3, 3);
             this.ListGridView.Name = "ListGridView";
             this.ListGridView.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -176,7 +150,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.ListGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.ListGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListGridView.Size = new System.Drawing.Size(1051, 459);
+            this.ListGridView.Size = new System.Drawing.Size(788, 373);
             this.ListGridView.TabIndex = 8;
             this.ListGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListGridView_CellContentDoubleClick);
             // 
@@ -185,9 +159,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(67, 42);
+            this.label2.Location = new System.Drawing.Point(50, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(843, 37);
+            this.label2.Size = new System.Drawing.Size(700, 30);
             this.label2.TabIndex = 22;
             this.label2.Text = "Select one of the following options to generate a PDF file:";
             // 
@@ -197,106 +172,22 @@
             this.panel3.Controls.Add(this.flowLayoutPanel2);
             this.panel3.Controls.Add(this.btnStatistics);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1124, 172);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(843, 140);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(767, 727);
+            this.panel3.Size = new System.Drawing.Size(575, 590);
             this.panel3.TabIndex = 2;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.flowLayoutPanel2.Controls.Add(this.chart1);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(17, 156);
+            this.flowLayoutPanel2.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(13, 127);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(51, 50, 51, 50);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(724, 463);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(38, 41, 38, 41);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(543, 376);
             this.flowLayoutPanel2.TabIndex = 23;
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistics.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.btnStatistics.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnStatistics.Location = new System.Drawing.Point(29, 42);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(237, 71);
-            this.btnStatistics.TabIndex = 22;
-            this.btnStatistics.Text = "Statistics";
-            this.btnStatistics.UseVisualStyleBackColor = false;
-            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.button8);
-            this.panel5.Controls.Add(this.Exit);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 899);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1891, 87);
-            this.panel5.TabIndex = 4;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button8.Location = new System.Drawing.Point(693, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(221, 87);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "Back";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // Exit
-            // 
-            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Exit.Location = new System.Drawing.Point(969, 0);
-            this.Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(229, 87);
-            this.Exit.TabIndex = 23;
-            this.Exit.Text = "Exit";
-            this.Exit.UseVisualStyleBackColor = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1891, 172);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(689, 59);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 57);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Inspection Templates";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chart1
             // 
@@ -304,7 +195,8 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(54, 53);
+            this.chart1.Location = new System.Drawing.Point(40, 43);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Color = System.Drawing.Color.Blue;
@@ -316,95 +208,102 @@
             series2.Name = "Inspections";
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(607, 355);
+            this.chart1.Size = new System.Drawing.Size(456, 289);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
-            // softwareEngineeringDataSet
+            // btnStatistics
             // 
-            this.softwareEngineeringDataSet.DataSetName = "SoftwareEngineeringDataSet";
-            this.softwareEngineeringDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnStatistics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnStatistics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistics.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.btnStatistics.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnStatistics.Location = new System.Drawing.Point(22, 34);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(178, 58);
+            this.btnStatistics.TabIndex = 22;
+            this.btnStatistics.Text = "Statistics";
+            this.btnStatistics.UseVisualStyleBackColor = false;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
-            // auditBindingSource
+            // panel5
             // 
-            this.auditBindingSource.DataMember = "Audit";
-            this.auditBindingSource.DataSource = this.softwareEngineeringDataSet;
+            this.panel5.Controls.Add(this.button8);
+            this.panel5.Controls.Add(this.Exit);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 730);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1418, 71);
+            this.panel5.TabIndex = 4;
             // 
-            // auditTableAdapter
+            // button8
             // 
-            this.auditTableAdapter.ClearBeforeFill = true;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button8.Location = new System.Drawing.Point(520, 0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(166, 71);
+            this.button8.TabIndex = 24;
+            this.button8.Text = "Back";
+            this.button8.UseVisualStyleBackColor = false;
             // 
-            // auditIDDataGridViewTextBoxColumn
+            // Exit
             // 
-            this.auditIDDataGridViewTextBoxColumn.DataPropertyName = "Audit_ID";
-            this.auditIDDataGridViewTextBoxColumn.HeaderText = "Audit_ID";
-            this.auditIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.auditIDDataGridViewTextBoxColumn.Name = "auditIDDataGridViewTextBoxColumn";
-            this.auditIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Exit.Location = new System.Drawing.Point(727, 0);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(172, 71);
+            this.Exit.TabIndex = 23;
+            this.Exit.Text = "Exit";
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // questionIDDataGridViewTextBoxColumn
+            // panel2
             // 
-            this.questionIDDataGridViewTextBoxColumn.DataPropertyName = "Question_ID";
-            this.questionIDDataGridViewTextBoxColumn.HeaderText = "Question_ID";
-            this.questionIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.questionIDDataGridViewTextBoxColumn.Name = "questionIDDataGridViewTextBoxColumn";
-            this.questionIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1418, 140);
+            this.panel2.TabIndex = 1;
             // 
-            // interventionsDataGridViewTextBoxColumn
+            // label1
             // 
-            this.interventionsDataGridViewTextBoxColumn.DataPropertyName = "Interventions";
-            this.interventionsDataGridViewTextBoxColumn.HeaderText = "Interventions";
-            this.interventionsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.interventionsDataGridViewTextBoxColumn.Name = "interventionsDataGridViewTextBoxColumn";
-            this.interventionsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(517, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(396, 44);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Inspection Templates";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // commentDataGridViewTextBoxColumn
+            // comboBox1
             // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "Comment";
-            this.commentDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // completedDataGridViewTextBoxColumn
-            // 
-            this.completedDataGridViewTextBoxColumn.DataPropertyName = "Completed";
-            this.completedDataGridViewTextBoxColumn.HeaderText = "Completed";
-            this.completedDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.completedDataGridViewTextBoxColumn.Name = "completedDataGridViewTextBoxColumn";
-            this.completedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // actiontakenDataGridViewTextBoxColumn
-            // 
-            this.actiontakenDataGridViewTextBoxColumn.DataPropertyName = "Action_taken";
-            this.actiontakenDataGridViewTextBoxColumn.HeaderText = "Action_taken";
-            this.actiontakenDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.actiontakenDataGridViewTextBoxColumn.Name = "actiontakenDataGridViewTextBoxColumn";
-            this.actiontakenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imageDataGridViewImageColumn
-            // 
-            this.imageDataGridViewImageColumn.DataPropertyName = "Image";
-            this.imageDataGridViewImageColumn.HeaderText = "Image";
-            this.imageDataGridViewImageColumn.MinimumWidth = 6;
-            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
-            this.imageDataGridViewImageColumn.ReadOnly = true;
-            // 
-            // categoryIDDataGridViewTextBoxColumn
-            // 
-            this.categoryIDDataGridViewTextBoxColumn.DataPropertyName = "category_ID";
-            this.categoryIDDataGridViewTextBoxColumn.HeaderText = "category_ID";
-            this.categoryIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryIDDataGridViewTextBoxColumn.Name = "categoryIDDataGridViewTextBoxColumn";
-            this.categoryIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(41, 337);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 24;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1891, 986);
+            this.ClientSize = new System.Drawing.Size(1418, 801);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -415,12 +314,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ListGridView)).EndInit();
             this.panel3.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.softwareEngineeringDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,9 +339,7 @@
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Label nReports;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private SoftwareEngineeringDataSet softwareEngineeringDataSet;
-        private System.Windows.Forms.BindingSource auditBindingSource;
-        private SoftwareEngineeringDataSetTableAdapters.AuditTableAdapter auditTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn auditIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn questionIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn interventionsDataGridViewTextBoxColumn;
@@ -453,5 +348,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn actiontakenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
