@@ -57,23 +57,28 @@ namespace SoftwareEngineeringApp.Forms
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
-            if( TypeTxt.Text == "")
+            if (TypeTxt.Text == "")
             {
                 MessageBox.Show("Insert Job Type.", "Field Missing");
-            } else if (SupervisorCB.Text == "Please Select.")
+            }
+            else if (SupervisorCB.Text == "Please Select.")
             {
                 MessageBox.Show("Select a SuperVisor.", "Field Missing");
-            } else if (WorkAreaCB.Text == "Please Select.")
+            }
+            else if (WorkAreaCB.Text == "Please Select.")
             {
                 MessageBox.Show("Select a Work Area.", "Field Missing");
-            } else if (DescriptionTxt.Text == "")
+            }
+            else if (DescriptionTxt.Text == "")
             {
                 MessageBox.Show("Insert a job Description.", "Field Missing");
             }
+            //else { 
 
-            InspectionForm form2 = new InspectionForm(Int32.Parse(TemplateNoTxt.Text), Int32.Parse(AuditIDTxt.Text),DateTime.Parse(DateTxt.Text),TypeTxt.Text,SupervisorCB.Text,InspectorTxt.Text,SiteTxt.Text,WorkAreaCB.Text,DescriptionTxt.Text);
-            form2.Show();
-            this.Close();
+                InspectionForm form2 = new InspectionForm(Int32.Parse(TemplateNoTxt.Text), Int32.Parse(AuditIDTxt.Text), DateTime.Parse(DateTxt.Text), TypeTxt.Text, SupervisorCB.Text, InspectorTxt.Text, SiteTxt.Text, WorkAreaCB.Text, DescriptionTxt.Text);
+                form2.Show();
+                this.Close();
+            //}
         }
     }
 }

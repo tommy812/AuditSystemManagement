@@ -21,9 +21,6 @@ namespace SoftwareEngineeringApp
         private static Int32 user_site;
         public static string site_name;
 
-
-
-
         public LogInForm()
         {
             InitializeComponent();
@@ -42,8 +39,6 @@ namespace SoftwareEngineeringApp
             bool verify = user.User_verification();
             if (verify == true)
             {
-
-
                 int role = user.Role;
                 if (role == 0)
                 {
@@ -65,7 +60,6 @@ namespace SoftwareEngineeringApp
                 MessageBox.Show("Logged in as: "+Environment.NewLine+" Name: " + user.Name + ", Surname: " + user.Surname + ", Role: " + user_role + ", Site: " + site_name);
 
                 
-
                 MainForm form2 = new MainForm(user.Name, user.Surname, user_role, site_name);
                 form2.Show();
                 this.Visible = false;

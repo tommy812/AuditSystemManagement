@@ -79,7 +79,7 @@ namespace SoftwareEngineeringApp
 
         private void LogOutBtn_Click(object sender, EventArgs e)
         {
-            //Bhooo
+            
             LogInForm form1 = new LogInForm();
             form1.Show();
             this.Visible = false;
