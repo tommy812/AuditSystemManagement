@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewInspectionForm));
             this.TitlePnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.AuditIDTxt = new System.Windows.Forms.TextBox();
-            this.DateTxt = new System.Windows.Forms.TextBox();
-            this.TypeTxt = new System.Windows.Forms.TextBox();
-            this.DescriptionTxt = new System.Windows.Forms.TextBox();
-            this.SupervisorCB = new System.Windows.Forms.ComboBox();
-            this.WorkAreaCB = new System.Windows.Forms.ComboBox();
-            this.DescriptionLbl = new FontAwesome.Sharp.IconButton();
-            this.WorkAreaLbl = new FontAwesome.Sharp.IconButton();
-            this.SupervisorLbl = new FontAwesome.Sharp.IconButton();
-            this.TypeLbl = new FontAwesome.Sharp.IconButton();
-            this.DateLbl = new FontAwesome.Sharp.IconButton();
-            this.AuditLbl = new FontAwesome.Sharp.IconButton();
             this.CancelBtn = new FontAwesome.Sharp.IconButton();
             this.StartBtn = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.TemplateNoLbl = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.TemplateNoTxt = new System.Windows.Forms.TextBox();
+            this.TemplateNoLbl = new FontAwesome.Sharp.IconButton();
+            this.AuditIDTxt = new System.Windows.Forms.TextBox();
+            this.AuditLbl = new FontAwesome.Sharp.IconButton();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.InspectorTxt = new System.Windows.Forms.TextBox();
             this.InspectorLbl = new FontAwesome.Sharp.IconButton();
-            this.SiteLbl = new FontAwesome.Sharp.IconButton();
+            this.DateTxt = new System.Windows.Forms.TextBox();
+            this.DateLbl = new FontAwesome.Sharp.IconButton();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.SiteTxt = new System.Windows.Forms.TextBox();
+            this.SiteLbl = new FontAwesome.Sharp.IconButton();
+            this.TypeTxt = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.TypeLbl = new FontAwesome.Sharp.IconButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.WorkAreaCB = new System.Windows.Forms.ComboBox();
+            this.SupervisorCB = new System.Windows.Forms.ComboBox();
+            this.WorkAreaLbl = new FontAwesome.Sharp.IconButton();
+            this.SupervisorLbl = new FontAwesome.Sharp.IconButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.DescriptionTxt = new System.Windows.Forms.TextBox();
+            this.DescriptionLbl = new FontAwesome.Sharp.IconButton();
             this.TitlePnl.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -102,230 +103,6 @@
             this.panel2.Size = new System.Drawing.Size(1168, 94);
             this.panel2.TabIndex = 29;
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 140);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1168, 21);
-            this.panel1.TabIndex = 30;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.TemplateNoTxt);
-            this.panel3.Controls.Add(this.TemplateNoLbl);
-            this.panel3.Controls.Add(this.AuditIDTxt);
-            this.panel3.Controls.Add(this.AuditLbl);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 161);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1168, 61);
-            this.panel3.TabIndex = 31;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.InspectorTxt);
-            this.panel4.Controls.Add(this.InspectorLbl);
-            this.panel4.Controls.Add(this.DateTxt);
-            this.panel4.Controls.Add(this.DateLbl);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 222);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1168, 59);
-            this.panel4.TabIndex = 32;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.SiteTxt);
-            this.panel5.Controls.Add(this.SiteLbl);
-            this.panel5.Controls.Add(this.TypeTxt);
-            this.panel5.Controls.Add(this.iconButton1);
-            this.panel5.Controls.Add(this.TypeLbl);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 281);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1168, 58);
-            this.panel5.TabIndex = 33;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.WorkAreaCB);
-            this.panel6.Controls.Add(this.SupervisorCB);
-            this.panel6.Controls.Add(this.WorkAreaLbl);
-            this.panel6.Controls.Add(this.SupervisorLbl);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 339);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1168, 64);
-            this.panel6.TabIndex = 34;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.DescriptionTxt);
-            this.panel7.Controls.Add(this.DescriptionLbl);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 403);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1168, 64);
-            this.panel7.TabIndex = 35;
-            // 
-            // AuditIDTxt
-            // 
-            this.AuditIDTxt.Enabled = false;
-            this.AuditIDTxt.Location = new System.Drawing.Point(289, 20);
-            this.AuditIDTxt.Name = "AuditIDTxt";
-            this.AuditIDTxt.Size = new System.Drawing.Size(303, 20);
-            this.AuditIDTxt.TabIndex = 27;
-            // 
-            // DateTxt
-            // 
-            this.DateTxt.Enabled = false;
-            this.DateTxt.Location = new System.Drawing.Point(294, 17);
-            this.DateTxt.Name = "DateTxt";
-            this.DateTxt.Size = new System.Drawing.Size(298, 20);
-            this.DateTxt.TabIndex = 28;
-            // 
-            // TypeTxt
-            // 
-            this.TypeTxt.Location = new System.Drawing.Point(294, 20);
-            this.TypeTxt.Name = "TypeTxt";
-            this.TypeTxt.Size = new System.Drawing.Size(298, 20);
-            this.TypeTxt.TabIndex = 28;
-            // 
-            // DescriptionTxt
-            // 
-            this.DescriptionTxt.Location = new System.Drawing.Point(289, 6);
-            this.DescriptionTxt.Multiline = true;
-            this.DescriptionTxt.Name = "DescriptionTxt";
-            this.DescriptionTxt.Size = new System.Drawing.Size(822, 41);
-            this.DescriptionTxt.TabIndex = 28;
-            // 
-            // SupervisorCB
-            // 
-            this.SupervisorCB.FormattingEnabled = true;
-            this.SupervisorCB.Location = new System.Drawing.Point(294, 20);
-            this.SupervisorCB.Name = "SupervisorCB";
-            this.SupervisorCB.Size = new System.Drawing.Size(298, 21);
-            this.SupervisorCB.TabIndex = 27;
-            this.SupervisorCB.Text = "Please Select.";
-            // 
-            // WorkAreaCB
-            // 
-            this.WorkAreaCB.FormattingEnabled = true;
-            this.WorkAreaCB.Location = new System.Drawing.Point(813, 20);
-            this.WorkAreaCB.Name = "WorkAreaCB";
-            this.WorkAreaCB.Size = new System.Drawing.Size(298, 21);
-            this.WorkAreaCB.TabIndex = 28;
-            this.WorkAreaCB.Text = "Please Select.";
-            // 
-            // DescriptionLbl
-            // 
-            this.DescriptionLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DescriptionLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.DescriptionLbl.FlatAppearance.BorderSize = 0;
-            this.DescriptionLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DescriptionLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.DescriptionLbl.ForeColor = System.Drawing.Color.White;
-            this.DescriptionLbl.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.DescriptionLbl.IconColor = System.Drawing.Color.Black;
-            this.DescriptionLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DescriptionLbl.Location = new System.Drawing.Point(91, 6);
-            this.DescriptionLbl.Name = "DescriptionLbl";
-            this.DescriptionLbl.Size = new System.Drawing.Size(167, 41);
-            this.DescriptionLbl.TabIndex = 26;
-            this.DescriptionLbl.Text = "Job Description:";
-            this.DescriptionLbl.UseVisualStyleBackColor = false;
-            // 
-            // WorkAreaLbl
-            // 
-            this.WorkAreaLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.WorkAreaLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.WorkAreaLbl.FlatAppearance.BorderSize = 0;
-            this.WorkAreaLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WorkAreaLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.WorkAreaLbl.ForeColor = System.Drawing.Color.White;
-            this.WorkAreaLbl.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.WorkAreaLbl.IconColor = System.Drawing.Color.Black;
-            this.WorkAreaLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.WorkAreaLbl.Location = new System.Drawing.Point(615, 6);
-            this.WorkAreaLbl.Name = "WorkAreaLbl";
-            this.WorkAreaLbl.Size = new System.Drawing.Size(167, 41);
-            this.WorkAreaLbl.TabIndex = 26;
-            this.WorkAreaLbl.Text = "Work Area:";
-            this.WorkAreaLbl.UseVisualStyleBackColor = false;
-            // 
-            // SupervisorLbl
-            // 
-            this.SupervisorLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SupervisorLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.SupervisorLbl.FlatAppearance.BorderSize = 0;
-            this.SupervisorLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SupervisorLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.SupervisorLbl.ForeColor = System.Drawing.Color.White;
-            this.SupervisorLbl.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.SupervisorLbl.IconColor = System.Drawing.Color.Black;
-            this.SupervisorLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SupervisorLbl.Location = new System.Drawing.Point(91, 6);
-            this.SupervisorLbl.Name = "SupervisorLbl";
-            this.SupervisorLbl.Size = new System.Drawing.Size(167, 41);
-            this.SupervisorLbl.TabIndex = 26;
-            this.SupervisorLbl.Text = "Supervisor:";
-            this.SupervisorLbl.UseVisualStyleBackColor = false;
-            // 
-            // TypeLbl
-            // 
-            this.TypeLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TypeLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.TypeLbl.FlatAppearance.BorderSize = 0;
-            this.TypeLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TypeLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.TypeLbl.ForeColor = System.Drawing.Color.White;
-            this.TypeLbl.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.TypeLbl.IconColor = System.Drawing.Color.Black;
-            this.TypeLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.TypeLbl.Location = new System.Drawing.Point(91, 6);
-            this.TypeLbl.Name = "TypeLbl";
-            this.TypeLbl.Size = new System.Drawing.Size(167, 41);
-            this.TypeLbl.TabIndex = 26;
-            this.TypeLbl.Text = "Type:";
-            this.TypeLbl.UseVisualStyleBackColor = false;
-            // 
-            // DateLbl
-            // 
-            this.DateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DateLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.DateLbl.FlatAppearance.BorderSize = 0;
-            this.DateLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DateLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.DateLbl.ForeColor = System.Drawing.Color.White;
-            this.DateLbl.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.DateLbl.IconColor = System.Drawing.Color.Black;
-            this.DateLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DateLbl.Location = new System.Drawing.Point(91, 3);
-            this.DateLbl.Name = "DateLbl";
-            this.DateLbl.Size = new System.Drawing.Size(167, 41);
-            this.DateLbl.TabIndex = 26;
-            this.DateLbl.Text = "Date:";
-            this.DateLbl.UseVisualStyleBackColor = false;
-            // 
-            // AuditLbl
-            // 
-            this.AuditLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AuditLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.AuditLbl.FlatAppearance.BorderSize = 0;
-            this.AuditLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AuditLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.AuditLbl.ForeColor = System.Drawing.Color.White;
-            this.AuditLbl.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.AuditLbl.IconColor = System.Drawing.Color.Black;
-            this.AuditLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AuditLbl.Location = new System.Drawing.Point(91, 6);
-            this.AuditLbl.Name = "AuditLbl";
-            this.AuditLbl.Size = new System.Drawing.Size(167, 41);
-            this.AuditLbl.TabIndex = 26;
-            this.AuditLbl.Text = "Audit ID:";
-            this.AuditLbl.UseVisualStyleBackColor = false;
-            // 
             // CancelBtn
             // 
             this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
@@ -364,23 +141,33 @@
             this.StartBtn.UseVisualStyleBackColor = false;
             this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
             // 
-            // iconButton1
+            // panel1
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(91, -56);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(167, 41);
-            this.iconButton1.TabIndex = 26;
-            this.iconButton1.Text = "Date:";
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 140);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1168, 21);
+            this.panel1.TabIndex = 30;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.TemplateNoTxt);
+            this.panel3.Controls.Add(this.TemplateNoLbl);
+            this.panel3.Controls.Add(this.AuditIDTxt);
+            this.panel3.Controls.Add(this.AuditLbl);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 161);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1168, 61);
+            this.panel3.TabIndex = 31;
+            // 
+            // TemplateNoTxt
+            // 
+            this.TemplateNoTxt.Enabled = false;
+            this.TemplateNoTxt.Location = new System.Drawing.Point(813, 20);
+            this.TemplateNoTxt.Name = "TemplateNoTxt";
+            this.TemplateNoTxt.Size = new System.Drawing.Size(303, 20);
+            this.TemplateNoTxt.TabIndex = 30;
             // 
             // TemplateNoLbl
             // 
@@ -400,13 +187,43 @@
             this.TemplateNoLbl.Text = "Template N. :";
             this.TemplateNoLbl.UseVisualStyleBackColor = false;
             // 
-            // TemplateNoTxt
+            // AuditIDTxt
             // 
-            this.TemplateNoTxt.Enabled = false;
-            this.TemplateNoTxt.Location = new System.Drawing.Point(813, 20);
-            this.TemplateNoTxt.Name = "TemplateNoTxt";
-            this.TemplateNoTxt.Size = new System.Drawing.Size(303, 20);
-            this.TemplateNoTxt.TabIndex = 30;
+            this.AuditIDTxt.Enabled = false;
+            this.AuditIDTxt.Location = new System.Drawing.Point(289, 20);
+            this.AuditIDTxt.Name = "AuditIDTxt";
+            this.AuditIDTxt.Size = new System.Drawing.Size(303, 20);
+            this.AuditIDTxt.TabIndex = 27;
+            // 
+            // AuditLbl
+            // 
+            this.AuditLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AuditLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.AuditLbl.FlatAppearance.BorderSize = 0;
+            this.AuditLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AuditLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.AuditLbl.ForeColor = System.Drawing.Color.White;
+            this.AuditLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.AuditLbl.IconColor = System.Drawing.Color.Black;
+            this.AuditLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.AuditLbl.Location = new System.Drawing.Point(91, 6);
+            this.AuditLbl.Name = "AuditLbl";
+            this.AuditLbl.Size = new System.Drawing.Size(167, 41);
+            this.AuditLbl.TabIndex = 26;
+            this.AuditLbl.Text = "Audit ID:";
+            this.AuditLbl.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.InspectorTxt);
+            this.panel4.Controls.Add(this.InspectorLbl);
+            this.panel4.Controls.Add(this.DateTxt);
+            this.panel4.Controls.Add(this.DateLbl);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 222);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1168, 59);
+            this.panel4.TabIndex = 32;
             // 
             // InspectorTxt
             // 
@@ -434,6 +251,53 @@
             this.InspectorLbl.Text = "Inspector:";
             this.InspectorLbl.UseVisualStyleBackColor = false;
             // 
+            // DateTxt
+            // 
+            this.DateTxt.Enabled = false;
+            this.DateTxt.Location = new System.Drawing.Point(294, 17);
+            this.DateTxt.Name = "DateTxt";
+            this.DateTxt.Size = new System.Drawing.Size(298, 20);
+            this.DateTxt.TabIndex = 28;
+            // 
+            // DateLbl
+            // 
+            this.DateLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DateLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.DateLbl.FlatAppearance.BorderSize = 0;
+            this.DateLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DateLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.DateLbl.ForeColor = System.Drawing.Color.White;
+            this.DateLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.DateLbl.IconColor = System.Drawing.Color.Black;
+            this.DateLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.DateLbl.Location = new System.Drawing.Point(91, 3);
+            this.DateLbl.Name = "DateLbl";
+            this.DateLbl.Size = new System.Drawing.Size(167, 41);
+            this.DateLbl.TabIndex = 26;
+            this.DateLbl.Text = "Date:";
+            this.DateLbl.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.SiteTxt);
+            this.panel5.Controls.Add(this.SiteLbl);
+            this.panel5.Controls.Add(this.TypeTxt);
+            this.panel5.Controls.Add(this.iconButton1);
+            this.panel5.Controls.Add(this.TypeLbl);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 281);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1168, 58);
+            this.panel5.TabIndex = 33;
+            // 
+            // SiteTxt
+            // 
+            this.SiteTxt.Enabled = false;
+            this.SiteTxt.Location = new System.Drawing.Point(813, 20);
+            this.SiteTxt.Name = "SiteTxt";
+            this.SiteTxt.Size = new System.Drawing.Size(303, 20);
+            this.SiteTxt.TabIndex = 33;
+            // 
             // SiteLbl
             // 
             this.SiteLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -452,13 +316,150 @@
             this.SiteLbl.Text = "Site:";
             this.SiteLbl.UseVisualStyleBackColor = false;
             // 
-            // SiteTxt
+            // TypeTxt
             // 
-            this.SiteTxt.Enabled = false;
-            this.SiteTxt.Location = new System.Drawing.Point(813, 20);
-            this.SiteTxt.Name = "SiteTxt";
-            this.SiteTxt.Size = new System.Drawing.Size(303, 20);
-            this.SiteTxt.TabIndex = 33;
+            this.TypeTxt.Location = new System.Drawing.Point(294, 20);
+            this.TypeTxt.Name = "TypeTxt";
+            this.TypeTxt.Size = new System.Drawing.Size(298, 20);
+            this.TypeTxt.TabIndex = 28;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconButton1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(91, -56);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(167, 41);
+            this.iconButton1.TabIndex = 26;
+            this.iconButton1.Text = "Date:";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // TypeLbl
+            // 
+            this.TypeLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TypeLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.TypeLbl.FlatAppearance.BorderSize = 0;
+            this.TypeLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TypeLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.TypeLbl.ForeColor = System.Drawing.Color.White;
+            this.TypeLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.TypeLbl.IconColor = System.Drawing.Color.Black;
+            this.TypeLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.TypeLbl.Location = new System.Drawing.Point(91, 6);
+            this.TypeLbl.Name = "TypeLbl";
+            this.TypeLbl.Size = new System.Drawing.Size(167, 41);
+            this.TypeLbl.TabIndex = 26;
+            this.TypeLbl.Text = "Type:";
+            this.TypeLbl.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.WorkAreaCB);
+            this.panel6.Controls.Add(this.SupervisorCB);
+            this.panel6.Controls.Add(this.WorkAreaLbl);
+            this.panel6.Controls.Add(this.SupervisorLbl);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 339);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1168, 64);
+            this.panel6.TabIndex = 34;
+            // 
+            // WorkAreaCB
+            // 
+            this.WorkAreaCB.FormattingEnabled = true;
+            this.WorkAreaCB.Location = new System.Drawing.Point(813, 20);
+            this.WorkAreaCB.Name = "WorkAreaCB";
+            this.WorkAreaCB.Size = new System.Drawing.Size(298, 21);
+            this.WorkAreaCB.TabIndex = 28;
+            this.WorkAreaCB.Text = "Please Select.";
+            // 
+            // SupervisorCB
+            // 
+            this.SupervisorCB.FormattingEnabled = true;
+            this.SupervisorCB.Location = new System.Drawing.Point(294, 20);
+            this.SupervisorCB.Name = "SupervisorCB";
+            this.SupervisorCB.Size = new System.Drawing.Size(298, 21);
+            this.SupervisorCB.TabIndex = 27;
+            this.SupervisorCB.Text = "Please Select.";
+            // 
+            // WorkAreaLbl
+            // 
+            this.WorkAreaLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.WorkAreaLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.WorkAreaLbl.FlatAppearance.BorderSize = 0;
+            this.WorkAreaLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WorkAreaLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.WorkAreaLbl.ForeColor = System.Drawing.Color.White;
+            this.WorkAreaLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.WorkAreaLbl.IconColor = System.Drawing.Color.Black;
+            this.WorkAreaLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.WorkAreaLbl.Location = new System.Drawing.Point(615, 6);
+            this.WorkAreaLbl.Name = "WorkAreaLbl";
+            this.WorkAreaLbl.Size = new System.Drawing.Size(167, 41);
+            this.WorkAreaLbl.TabIndex = 26;
+            this.WorkAreaLbl.Text = "Work Area:";
+            this.WorkAreaLbl.UseVisualStyleBackColor = false;
+            // 
+            // SupervisorLbl
+            // 
+            this.SupervisorLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SupervisorLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.SupervisorLbl.FlatAppearance.BorderSize = 0;
+            this.SupervisorLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SupervisorLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.SupervisorLbl.ForeColor = System.Drawing.Color.White;
+            this.SupervisorLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.SupervisorLbl.IconColor = System.Drawing.Color.Black;
+            this.SupervisorLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SupervisorLbl.Location = new System.Drawing.Point(91, 6);
+            this.SupervisorLbl.Name = "SupervisorLbl";
+            this.SupervisorLbl.Size = new System.Drawing.Size(167, 41);
+            this.SupervisorLbl.TabIndex = 26;
+            this.SupervisorLbl.Text = "Supervisor:";
+            this.SupervisorLbl.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.DescriptionTxt);
+            this.panel7.Controls.Add(this.DescriptionLbl);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 403);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1168, 64);
+            this.panel7.TabIndex = 35;
+            // 
+            // DescriptionTxt
+            // 
+            this.DescriptionTxt.Location = new System.Drawing.Point(289, 6);
+            this.DescriptionTxt.Multiline = true;
+            this.DescriptionTxt.Name = "DescriptionTxt";
+            this.DescriptionTxt.Size = new System.Drawing.Size(822, 41);
+            this.DescriptionTxt.TabIndex = 28;
+            // 
+            // DescriptionLbl
+            // 
+            this.DescriptionLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DescriptionLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.DescriptionLbl.FlatAppearance.BorderSize = 0;
+            this.DescriptionLbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DescriptionLbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.DescriptionLbl.ForeColor = System.Drawing.Color.White;
+            this.DescriptionLbl.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.DescriptionLbl.IconColor = System.Drawing.Color.Black;
+            this.DescriptionLbl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.DescriptionLbl.Location = new System.Drawing.Point(91, 6);
+            this.DescriptionLbl.Name = "DescriptionLbl";
+            this.DescriptionLbl.Size = new System.Drawing.Size(167, 41);
+            this.DescriptionLbl.TabIndex = 26;
+            this.DescriptionLbl.Text = "Job Description:";
+            this.DescriptionLbl.UseVisualStyleBackColor = false;
             // 
             // NewInspectionForm
             // 
@@ -475,6 +476,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.TitlePnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewInspectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewInspectionForm";

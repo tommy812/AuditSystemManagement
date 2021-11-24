@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Coded Reference: Canvas, attributes and method 'Get Data ' provided by instructure during online session
 namespace SoftwareEngineeringApp.Classes
 {
     class DBConnection

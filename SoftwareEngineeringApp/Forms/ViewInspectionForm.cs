@@ -36,43 +36,52 @@ namespace SoftwareEngineeringApp.Forms
 
         private void QuestionGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string Category = (string)QuestionGrid.Rows[e.RowIndex].Cells[2].Value;
-            string question = (string)QuestionGrid.Rows[e.RowIndex].Cells[1].Value;
-            int questionID = (int)QuestionGrid.Rows[e.RowIndex].Cells[0].Value;
-
-            string actionTaken = null;
-
-            string query = ("SELECT Interventions, Completed, Action_Taken, Comment FROM audit WHERE audit_ID=@audit_ID and question_ID = @question_ID");
-            DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
-            DataTable dataTableSite = dbConn.GetValueByID2(query, questionID, "question_ID", audit_ID, "audit_ID");
-
-            if (dataTableSite.Rows.Count > 0)
+            try
             {
-                DataRow row = dataTableSite.Rows[0];
 
-              //  siteName = row["Site_Name"].ToString();
-            }
-          //  return siteName;
+                string Category = (string)QuestionGrid.Rows[e.RowIndex].Cells[2].Value;
+                string question = (string)QuestionGrid.Rows[e.RowIndex].Cells[1].Value;
+                int questionID = (int)QuestionGrid.Rows[e.RowIndex].Cells[0].Value;
+
+                string actionTaken = null;
+
+                string query = ("SELECT Interventions, Completed, Action_Taken, Comment FROM audit WHERE audit_ID=@audit_ID and question_ID = @question_ID");
+                DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
+                DataTable dataTableSite = dbConn.GetValueByID2(query, questionID, "question_ID", audit_ID, "audit_ID");
+
+                if (dataTableSite.Rows.Count > 0)
+                {
+                    DataRow row = dataTableSite.Rows[0];
+
+                  //  siteName = row["Site_Name"].ToString();
+                }
+              //  return siteName;
 
 
 
-            QuestionLbl.Text = question;
-            CategoryLbl.Text = Category;
-            int isCompleted = Int32.Parse((string)dataTableSite.Rows[0][1]);
-            //checkBox.CheckState = CheckState.Checked;
-            //MessageBox.Show(isCompleted.ToString());
-            if(isCompleted == 1)
-            {
-                checkBox.CheckState = CheckState.Checked;
-            }
-            else if(isCompleted == 0)
-            {
-                checkBox.CheckState = CheckState.Unchecked;
-            }
+                QuestionLbl.Text = question;
+                CategoryLbl.Text = Category;
+                int isCompleted = Int32.Parse((string)dataTableSite.Rows[0][1]);
+                //checkBox.CheckState = CheckState.Checked;
+                //MessageBox.Show(isCompleted.ToString());
+                if(isCompleted == 1)
+                {
+                    checkBox.CheckState = CheckState.Checked;
+                }
+                else if(isCompleted == 0)
+                {
+                    checkBox.CheckState = CheckState.Unchecked;
+                }
           
-            interventiontxtbx.Text = dataTableSite.Rows[0][0].ToString();
-            ActionTakenTxtBx.Text = dataTableSite.Rows[0][2].ToString();
-            CommentTxtBx.Text = dataTableSite.Rows[0][3].ToString();
+                interventiontxtbx.Text = dataTableSite.Rows[0][0].ToString();
+                ActionTakenTxtBx.Text = dataTableSite.Rows[0][2].ToString();
+                CommentTxtBx.Text = dataTableSite.Rows[0][3].ToString();
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
 

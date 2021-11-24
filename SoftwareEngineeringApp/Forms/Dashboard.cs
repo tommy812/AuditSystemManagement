@@ -34,10 +34,18 @@ namespace SoftwareEngineeringApp.Forms
 
         private void ListGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int audit_no;
-            Int32.TryParse(ListGridView.Rows[e.RowIndex].Cells[0].Value.ToString(), out audit_no);
-            ViewInspectionForm form2 = new ViewInspectionForm(audit_no);
-            form2.Show();
+            try
+            {
+                int audit_no;
+                Int32.TryParse(ListGridView.Rows[e.RowIndex].Cells[0].Value.ToString(), out audit_no);
+                ViewInspectionForm form2 = new ViewInspectionForm(audit_no);
+                form2.Show();
+            }
+            catch (Exception)
+            {
+
+            }
+            
         }
 
         private void Exit_Click(object sender, EventArgs e)
