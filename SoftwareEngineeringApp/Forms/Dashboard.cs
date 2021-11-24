@@ -151,5 +151,11 @@ namespace SoftwareEngineeringApp.Forms
             }
             
         }
+
+        private void UsersBtn_Click(object sender, EventArgs e)
+        {
+            MenageUsersForm form2 = new MenageUsersForm();
+            form2.Show();
+        }
     }
 }

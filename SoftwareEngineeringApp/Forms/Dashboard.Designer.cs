@@ -49,6 +49,7 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.UsersBtn = new System.Windows.Forms.Button();
             this.allbtn = new System.Windows.Forms.Button();
             this.hundredBtn = new System.Windows.Forms.Button();
             this.tenBtn = new System.Windows.Forms.Button();
@@ -262,6 +263,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.UsersBtn);
             this.panel5.Controls.Add(this.allbtn);
             this.panel5.Controls.Add(this.hundredBtn);
             this.panel5.Controls.Add(this.tenBtn);
@@ -272,6 +274,21 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1418, 71);
             this.panel5.TabIndex = 4;
+            // 
+            // UsersBtn
+            // 
+            this.UsersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.UsersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UsersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsersBtn.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.UsersBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.UsersBtn.Location = new System.Drawing.Point(826, 6);
+            this.UsersBtn.Name = "UsersBtn";
+            this.UsersBtn.Size = new System.Drawing.Size(178, 58);
+            this.UsersBtn.TabIndex = 28;
+            this.UsersBtn.Text = "Manage Users";
+            this.UsersBtn.UseVisualStyleBackColor = false;
+            this.UsersBtn.Click += new System.EventHandler(this.UsersBtn_Click);
             // 
             // allbtn
             // 
@@ -429,5 +446,6 @@
         private System.Windows.Forms.Button allbtn;
         private System.Windows.Forms.Button hundredBtn;
         private System.Windows.Forms.Button tenBtn;
+        private System.Windows.Forms.Button UsersBtn;
     }
 }
