@@ -29,8 +29,8 @@ namespace SoftwareEngineeringApp.Forms
 
         //private void btn_Update_Click(object sender, EventArgs e)
         //{
-        //    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\inahi\source\repos\SoftwareEngineeringApp\newSE\SoftwareEngineeringApp\SoftwareEngineering.mdf;Integrated Security=True;Connect Timeout=30");
         //    con.Open();
+        //string query("Update Users set Name=@Name, User_ID=@User_ID, Site_ID=@Site_ID", con)
         //    SqlCommand cmd = new SqlCommand("Update Users set Name=@Name, User_ID=@User_ID, Site_ID=@Site_ID", con);
         //    cmd.Parameters.AddWithValue("@User_ID", int.Parse(textBox1.Text));
         //    cmd.Parameters.AddWithValue("@Name", textBox2.Text);
@@ -65,10 +65,7 @@ namespace SoftwareEngineeringApp.Forms
         //    dataGridView1.DataSource = dt;
         //}
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
 
         private void UserGridV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -105,6 +102,11 @@ namespace SoftwareEngineeringApp.Forms
             userID = id;
             dbConn.InsertUser(userID, name, surname, email, roleID, siteID);
             FillGrid();
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

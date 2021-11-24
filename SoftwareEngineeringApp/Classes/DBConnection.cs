@@ -199,18 +199,19 @@ namespace SoftwareEngineeringApp.Classes
         public void InsertUser(int UserID, string name, string surname, string email, int roleID, int siteID)
         {
             DBConnection dbcon = DBConnection.getInstanceOfDBConnection();
-            string query = "insert into Users values (@User_ID,@Name,@Surname,@Email,@Password,@Role_ID,@Site_ID)";
+            string query = "insert into Users values (@Name,@Surname,@Email,@Password,@Role_ID,@Site_ID)";
             using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
             {
+                connToDB.Open();
                 using (SqlCommand cmd = new SqlCommand(query, connToDB))
                 {
 
-                    cmd.Parameters.AddWithValue("@User_ID", UserID);
+                   // cmd.Parameters.AddWithValue("@User_ID", UserID);
                     cmd.Parameters.AddWithValue("@Name", name);
                     cmd.Parameters.AddWithValue("@Surname", surname);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Password", "Default");
-                    cmd.Parameters.AddWithValue("@RoleID", roleID);
+                    cmd.Parameters.AddWithValue("@Role_ID", roleID);
                     cmd.Parameters.AddWithValue("@Site_ID", siteID);
 
                     cmd.ExecuteNonQuery();
