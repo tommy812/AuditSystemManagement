@@ -188,6 +188,9 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenageUsersForm.resx">
+      <DependentUpon>MenageUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewInspectionForm.resx">
       <DependentUpon>ViewInspectionForm.cs</DependentUpon>
     </EmbeddedResource>
