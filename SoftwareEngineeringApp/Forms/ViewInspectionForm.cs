@@ -13,6 +13,7 @@ namespace SoftwareEngineeringApp.Forms
 {
     public partial class ViewInspectionForm : Form
     {
+        
         int audit_ID;
         public ViewInspectionForm(int audit_no)
         {
@@ -41,9 +42,9 @@ namespace SoftwareEngineeringApp.Forms
 
             string actionTaken = null;
 
-            string query = ("SELECT Action_Taken FROM audit WHERE audit_ID=@audit_ID and question_ID = @question_ID");
+            string query = ("SELECT Interventions, Completed, Action_Taken, Comment FROM audit WHERE audit_ID=@audit_ID and question_ID = @question_ID");
             DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
-            DataTable dataTableSite = dbConn.GetValueByID(query, questionID, "question_ID");
+            DataTable dataTableSite = dbConn.GetValueByID2(query, questionID, "question_ID", audit_ID, "audit_ID");
 
             if (dataTableSite.Rows.Count > 0)
             {
@@ -55,10 +56,23 @@ namespace SoftwareEngineeringApp.Forms
 
 
 
-
-            
             QuestionLbl.Text = question;
             CategoryLbl.Text = Category;
+            int isCompleted = Int32.Parse((string)dataTableSite.Rows[0][1]);
+            //checkBox.CheckState = CheckState.Checked;
+            //MessageBox.Show(isCompleted.ToString());
+            if(isCompleted == 1)
+            {
+                checkBox.CheckState = CheckState.Checked;
+            }
+            else if(isCompleted == 0)
+            {
+                checkBox.CheckState = CheckState.Unchecked;
+            }
+          
+            interventiontxtbx.Text = dataTableSite.Rows[0][0].ToString();
+            ActionTakenTxtBx.Text = dataTableSite.Rows[0][2].ToString();
+            CommentTxtBx.Text = dataTableSite.Rows[0][3].ToString();
         }
 
 
@@ -80,6 +94,12 @@ namespace SoftwareEngineeringApp.Forms
             fillGridView(audit_ID);
             
 
+        }
+
+        private void DownloadBtn_Click(object sender, EventArgs e)
+        {
+            PDF pdf = new PDF();
+            pdf.GetHeader(audit_ID);
         }
     }
 

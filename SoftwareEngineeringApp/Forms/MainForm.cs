@@ -93,7 +93,7 @@ namespace SoftwareEngineeringApp
 
         private void AdminDashboardBtn_Click(object sender, EventArgs e)
         {
-            openForm(new Dashboard());
+            openForm(new Dashboard(username));
         }
     }
 

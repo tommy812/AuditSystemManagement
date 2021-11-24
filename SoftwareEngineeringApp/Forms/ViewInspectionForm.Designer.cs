@@ -50,15 +50,14 @@
             this.CategoryLbl = new FontAwesome.Sharp.IconButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.QuestionGrid = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.AuditsCB = new System.Windows.Forms.ComboBox();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PreviousBtn = new FontAwesome.Sharp.IconButton();
-            this.NextBtn = new FontAwesome.Sharp.IconButton();
+            this.DownloadBtn = new System.Windows.Forms.Button();
             this.TitlePnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.AuditsCB = new System.Windows.Forms.ComboBox();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -66,9 +65,9 @@
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuestionGrid)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TitlePnl.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel7
@@ -96,6 +95,7 @@
             // CommentTxtBx
             // 
             this.CommentTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CommentTxtBx.Enabled = false;
             this.CommentTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommentTxtBx.Location = new System.Drawing.Point(190, 51);
             this.CommentTxtBx.Multiline = true;
@@ -129,6 +129,7 @@
             // ActionTakenTxtBx
             // 
             this.ActionTakenTxtBx.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ActionTakenTxtBx.Enabled = false;
             this.ActionTakenTxtBx.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActionTakenTxtBx.Location = new System.Drawing.Point(185, 38);
             this.ActionTakenTxtBx.Multiline = true;
@@ -173,6 +174,7 @@
             // checkBox
             // 
             this.checkBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox.Enabled = false;
             this.checkBox.Location = new System.Drawing.Point(643, 21);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(19, 41);
@@ -228,6 +230,7 @@
             // interventiontxtbx
             // 
             this.interventiontxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.interventiontxtbx.Enabled = false;
             this.interventiontxtbx.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.interventiontxtbx.Location = new System.Drawing.Point(386, 21);
             this.interventiontxtbx.MaxLength = 100;
@@ -348,51 +351,68 @@
             this.QuestionGrid.TabIndex = 7;
             this.QuestionGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QuestionGrid_CellClick);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
+            this.panel3.Controls.Add(this.AuditsCB);
+            this.panel3.Controls.Add(this.iconButton2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(445, 61);
+            this.panel3.TabIndex = 8;
+            // 
+            // AuditsCB
+            // 
+            this.AuditsCB.FormattingEnabled = true;
+            this.AuditsCB.Location = new System.Drawing.Point(201, 24);
+            this.AuditsCB.Name = "AuditsCB";
+            this.AuditsCB.Size = new System.Drawing.Size(220, 21);
+            this.AuditsCB.TabIndex = 20;
+            this.AuditsCB.SelectedIndexChanged += new System.EventHandler(this.AuditsCB_SelectedIndexChanged);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(12, 10);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(167, 41);
+            this.iconButton2.TabIndex = 19;
+            this.iconButton2.Text = "Audit no.";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.panel2.Controls.Add(this.PreviousBtn);
-            this.panel2.Controls.Add(this.NextBtn);
+            this.panel2.Controls.Add(this.DownloadBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 773);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1502, 57);
             this.panel2.TabIndex = 36;
             // 
-            // PreviousBtn
+            // DownloadBtn
             // 
-            this.PreviousBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.PreviousBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PreviousBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PreviousBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.PreviousBtn.ForeColor = System.Drawing.Color.White;
-            this.PreviousBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.PreviousBtn.IconColor = System.Drawing.Color.Black;
-            this.PreviousBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.PreviousBtn.Location = new System.Drawing.Point(0, 0);
-            this.PreviousBtn.Name = "PreviousBtn";
-            this.PreviousBtn.Size = new System.Drawing.Size(192, 57);
-            this.PreviousBtn.TabIndex = 23;
-            this.PreviousBtn.Text = "Previous";
-            this.PreviousBtn.UseVisualStyleBackColor = false;
-            this.PreviousBtn.Visible = false;
-            // 
-            // NextBtn
-            // 
-            this.NextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.NextBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.NextBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NextBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.NextBtn.ForeColor = System.Drawing.Color.White;
-            this.NextBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.NextBtn.IconColor = System.Drawing.Color.Black;
-            this.NextBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.NextBtn.Location = new System.Drawing.Point(1310, 0);
-            this.NextBtn.Name = "NextBtn";
-            this.NextBtn.Size = new System.Drawing.Size(192, 57);
-            this.NextBtn.TabIndex = 22;
-            this.NextBtn.Text = "Next";
-            this.NextBtn.UseVisualStyleBackColor = false;
+            this.DownloadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.DownloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DownloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DownloadBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.DownloadBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.DownloadBtn.Location = new System.Drawing.Point(3, 0);
+            this.DownloadBtn.Name = "DownloadBtn";
+            this.DownloadBtn.Size = new System.Drawing.Size(442, 57);
+            this.DownloadBtn.TabIndex = 26;
+            this.DownloadBtn.Text = "Download PDF";
+            this.DownloadBtn.UseVisualStyleBackColor = false;
+            this.DownloadBtn.Click += new System.EventHandler(this.DownloadBtn_Click);
             // 
             // TitlePnl
             // 
@@ -431,44 +451,6 @@
             this.iconButton1.Text = "sectionButton";
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(49)))));
-            this.panel3.Controls.Add(this.AuditsCB);
-            this.panel3.Controls.Add(this.iconButton2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(445, 61);
-            this.panel3.TabIndex = 8;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(12, 10);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(167, 41);
-            this.iconButton2.TabIndex = 19;
-            this.iconButton2.Text = "Audit no.";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // AuditsCB
-            // 
-            this.AuditsCB.FormattingEnabled = true;
-            this.AuditsCB.Location = new System.Drawing.Point(201, 24);
-            this.AuditsCB.Name = "AuditsCB";
-            this.AuditsCB.Size = new System.Drawing.Size(220, 21);
-            this.AuditsCB.TabIndex = 20;
-            this.AuditsCB.SelectedIndexChanged += new System.EventHandler(this.AuditsCB_SelectedIndexChanged);
-            // 
             // ViewInspectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,10 +479,10 @@
             this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QuestionGrid)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.TitlePnl.ResumeLayout(false);
             this.TitlePnl.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -530,10 +512,9 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.DataGridView QuestionGrid;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton PreviousBtn;
-        private FontAwesome.Sharp.IconButton NextBtn;
         private System.Windows.Forms.Panel TitlePnl;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Button DownloadBtn;
     }
 }

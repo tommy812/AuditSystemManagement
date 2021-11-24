@@ -61,7 +61,27 @@ namespace SoftwareEngineeringApp.Classes
 
                 return dataset;
         }
+        public DataTable GetData2(string sqlQuery)
+        {
 
+            DataTable dataTable = new DataTable();
+
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                //open connection
+                connToDB.Open();
+
+                //send  sql  query to the database
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlQuery, connToDB);
+
+                //filll in the dataset
+                adapter.Fill(dataTable) ;
+
+            }
+
+
+            return dataTable;
+        }
         //returns datatable
         public DataTable GetDataTable(string sqlQuery)
         {
@@ -81,9 +101,31 @@ namespace SoftwareEngineeringApp.Classes
                 return datatable;
         }
 
-        public DataTable GetValueByID(string query, int id, string var)
+        public DataTable GetValueByID2(string query, int id, string var, int id2, string var2)
         {
             
+            DataTable datatable = new DataTable();
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                //open connection
+                connToDB.Open();
+                using (datatable)
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, connToDB))
+                    {
+                        cmd.Parameters.AddWithValue(var, id);
+                        cmd.Parameters.AddWithValue(var2, id2);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(datatable);
+                    }
+                }
+            }
+            return datatable; 
+        }
+
+        public DataTable GetValueByID(string query, int id, string var)
+        {
+
             DataTable datatable = new DataTable();
             using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
             {
@@ -99,7 +141,7 @@ namespace SoftwareEngineeringApp.Classes
                     }
                 }
             }
-            return datatable; 
+            return datatable;
         }
 
         public int CountElements(string table)

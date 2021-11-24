@@ -82,3 +82,5 @@ namespace SoftwareEngineeringApp.Forms
         }
     }
 }
+
+// select count(r.interventions) as 'Interventions', count(a.audit_ID) as 'Inspections' s.Site_Name as 'Site' from audit_overall_result r inner join Audits_info a on r.audit_ID = a.audit_Id inner join sites s on s.site_ID = a.site_ID  group by s.site_ID
