@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 // Coded Reference: Canvas, attributes and method 'Get Data ' provided by instructure during online session
 namespace SoftwareEngineeringApp.Classes
@@ -192,6 +193,32 @@ namespace SoftwareEngineeringApp.Classes
             
 
             return value;
+        }
+
+        //niha reference youtube link:
+        public void InsertUser(int UserID, string name, string surname, string email, int roleID, int siteID)
+        {
+            DBConnection dbcon = DBConnection.getInstanceOfDBConnection();
+            string query = "insert into Users values (@User_ID,@Name,@Surname,@Email,@Password,@Role_ID,@Site_ID)";
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, connToDB))
+                {
+
+                    cmd.Parameters.AddWithValue("@User_ID", UserID);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Surname", surname);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", "Default");
+                    cmd.Parameters.AddWithValue("@RoleID", roleID);
+                    cmd.Parameters.AddWithValue("@Site_ID", siteID);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Successfully Saved!");
+
+                }
+            }
         }
 
     }
