@@ -108,5 +108,14 @@ namespace SoftwareEngineeringApp.Forms
         {
             this.Close();
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            userID = Int32.Parse(userTxt.Text);
+            string query = ("Select * from Users where User_ID=@User_ID");
+            DataTable dt = dbConn.GetValueByID(query, userID, "User_ID");
+            UserGridV.DataSource = dt;
+
+        }
     }
 }
