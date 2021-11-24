@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using iTextSharp.text;
@@ -203,7 +204,9 @@ namespace SoftwareEngineeringApp.Classes
 				pdfDoc.Open();
 
 				var imagepath = "C:/Users/thoma/Source/Repos/SoftwareEngineeringApp7/SoftwareEngineeringApp/Logo.jpg";
-				using (FileStream fs = new FileStream(imagepath, FileMode.Open))
+				string fileName = "Logo.jpg";
+				string paths = Path.Combine(Environment.CurrentDirectory, @"", fileName);
+				using (FileStream fs = new FileStream(paths, FileMode.Open))
 				{
 					var png = Image.GetInstance(System.Drawing.Image.FromStream(fs), ImageFormat.Png);
 					png.ScalePercent(50f);
