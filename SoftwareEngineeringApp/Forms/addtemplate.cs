@@ -44,45 +44,59 @@ namespace SoftwareEngineeringApp.Forms
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
-            //saveMethod();
-
+            Savebtn_Click();
         }
+        public void Savebtn_Click() { }
+           
+          public static string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
+        public static void a() 
+            {
+                DialogResult result;
+                result = MessageBox.Show("Do you want to save this template?");/*MessageBoxButtons "Y/N", MessageBoxIcon .Question);*/
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
 
-        private void Cancelbtn_Click(object sender, EventArgs e)
-        {
-          /*  cancelMethod(); base.Properties.SetObject(Cancelbtn_Click);
-            if ((value != null) {
-                value.DialogResult = DialogResult.Cancel;
+                //saveMethod();
 
             }
-               
+
+            private void Cancelbtn_Click(object sender, EventArgs e)
+            {
+                /*  cancelMethod(); base.Properties.SetObject(Cancelbtn_Click);
+                  if ((value != null) {
+                      value.DialogResult = DialogResult.Cancel;
+
+                  }
+
+                  }
+                  */
             }
-            */
+            private void saveMethod()
+            {
+
+            }
+            private void cancelMethod()
+            {
+
+            }
+
+
+
+            private void TextBox1_TextChanged_1(object sender, EventArgs e)
+            {
+
+            }
+
+            private void Nextbtn(object sender, EventArgs e)
+            {
+
+            }
+
+            private void Exitbtn(object sender, EventArgs e)
+            {
+                this.Close();
+            }
         }
-        private void saveMethod()
-        {
-
-        }
-        private void cancelMethod()
-        {
-
-        }
-
-        
-
-        private void TextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nextbtn(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Exitbtn(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-    }
-}
+    } 
