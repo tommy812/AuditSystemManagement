@@ -27,50 +27,10 @@ namespace SoftwareEngineeringApp.Forms
         }
        
 
-        //private void btn_Update_Click(object sender, EventArgs e)
-        //{
-        //    con.Open();
-        //string query("Update Users set Name=@Name, User_ID=@User_ID, Site_ID=@Site_ID", con)
-        //    SqlCommand cmd = new SqlCommand("Update Users set Name=@Name, User_ID=@User_ID, Site_ID=@Site_ID", con);
-        //    cmd.Parameters.AddWithValue("@User_ID", int.Parse(textBox1.Text));
-        //    cmd.Parameters.AddWithValue("@Name", textBox2.Text);
-        //    cmd.Parameters.AddWithValue("@Site_ID", int.Parse(textBox3.Text));
-        //    cmd.ExecuteNonQuery();
-
-        //    con.Close();
-        //    MessageBox.Show("Successfully Updated!");
-        //}
-
-        //private void btn_Del_Click(object sender, EventArgs e)
-        //{
-        //    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\inahi\source\repos\SoftwareEngineeringApp\newSE\SoftwareEngineeringApp\SoftwareEngineering.mdf;Integrated Security=True;Connect Timeout=30");
-        //    con.Open();
-        //    SqlCommand cmd = new SqlCommand("Delete Users where User_ID=@User_ID", con);
-        //    cmd.Parameters.AddWithValue("@User_ID", int.Parse(textBox1.Text));
-        //    cmd.ExecuteNonQuery();
-
-        //    con.Close();
-        //    MessageBox.Show("Successfully Deleted!");
-        //}
-
-        //private void btn_Search_Click(object sender, EventArgs e)
-        //{
-        //    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\inahi\source\repos\SoftwareEngineeringApp\newSE\SoftwareEngineeringApp\SoftwareEngineering.mdf;Integrated Security=True;Connect Timeout=30");
-        //    con.Open();
-        //    SqlCommand cmd = new SqlCommand("Select * from Users where User_ID=@User_ID", con);
-        //    cmd.Parameters.AddWithValue("User_ID", int.Parse(textBox1.Text));
-        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //    DataTable dt = new DataTable();
-        //    da.Fill(dt);
-        //    dataGridView1.DataSource = dt;
-        //}
-
-      
-
         private void UserGridV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            Int32.TryParse(UserGridV.Rows[e.RowIndex].Cells[0].Value.ToString(), out userID);
+            //Int32.TryParse(UserGridV.Rows[e.RowIndex].Cells[0].Value.ToString(), out userID);
             name = UserGridV.Rows[e.RowIndex].Cells[1].Value.ToString();
             surname = UserGridV.Rows[e.RowIndex].Cells[2].Value.ToString();
             email = UserGridV.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -79,7 +39,7 @@ namespace SoftwareEngineeringApp.Forms
             userTxt.Text = userID.ToString();
             nameTxt.Text = name;
             surnameTxt.Text = surname;
-            emilTxt.Text = email;
+            emailTxt.Text = email;
             roleTxt.Text = roleID.ToString();
             siteTxt.Text = siteID.ToString();
 
@@ -94,7 +54,7 @@ namespace SoftwareEngineeringApp.Forms
         {
             name = nameTxt.Text;
             surname = surnameTxt.Text;
-            email = emilTxt.Text;
+            email = emailTxt.Text;
             roleID = Int32.Parse(roleTxt.Text);
             siteID = Int32.Parse(siteTxt.Text);
             int id = dbConn.CountElements("Users");
@@ -116,6 +76,28 @@ namespace SoftwareEngineeringApp.Forms
             DataTable dt = dbConn.GetValueByID(query, userID, "User_ID");
             UserGridV.DataSource = dt;
 
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            name = nameTxt.Text;
+            surname = surnameTxt.Text;
+            email = emailTxt.Text;
+            roleID = Int32.Parse(roleTxt.Text);
+            siteID = Int32.Parse(siteTxt.Text);
+            int id = dbConn.CountElements("Users");
+            id++;
+            userID = id;
+            dbConn.UpdateUser(userID, name, surname, email, roleID, siteID);
+            FillGrid();
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+            int id = dbConn.CountElements("Users");
+            userID = id;
+            dbConn.DeleteUser(userID);
+            FillGrid();
         }
     }
 }

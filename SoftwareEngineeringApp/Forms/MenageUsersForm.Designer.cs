@@ -40,7 +40,7 @@
             this.UserGridV = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.roleTxt = new System.Windows.Forms.TextBox();
-            this.emilTxt = new System.Windows.Forms.TextBox();
+            this.emailTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.surnameTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -126,6 +126,7 @@
             this.btn_Del.TabIndex = 35;
             this.btn_Del.Text = "Delete";
             this.btn_Del.UseVisualStyleBackColor = false;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Update
             // 
@@ -141,6 +142,7 @@
             this.btn_Update.TabIndex = 34;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btnInsert
             // 
@@ -217,14 +219,14 @@
             this.roleTxt.Size = new System.Drawing.Size(123, 36);
             this.roleTxt.TabIndex = 81;
             // 
-            // emilTxt
+            // emailTxt
             // 
-            this.emilTxt.Font = new System.Drawing.Font("Century Gothic", 13.8F);
-            this.emilTxt.Location = new System.Drawing.Point(332, 377);
-            this.emilTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.emilTxt.Name = "emilTxt";
-            this.emilTxt.Size = new System.Drawing.Size(535, 36);
-            this.emilTxt.TabIndex = 80;
+            this.emailTxt.Font = new System.Drawing.Font("Century Gothic", 13.8F);
+            this.emailTxt.Location = new System.Drawing.Point(332, 377);
+            this.emailTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(535, 36);
+            this.emailTxt.TabIndex = 80;
             // 
             // label7
             // 
@@ -326,7 +328,7 @@
             this.Controls.Add(this.UserGridV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.roleTxt);
-            this.Controls.Add(this.emilTxt);
+            this.Controls.Add(this.emailTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.surnameTxt);
             this.Controls.Add(this.label6);
@@ -365,7 +367,7 @@
         private System.Windows.Forms.DataGridView UserGridV;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox roleTxt;
-        private System.Windows.Forms.TextBox emilTxt;
+        private System.Windows.Forms.TextBox emailTxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox surnameTxt;
         private System.Windows.Forms.Label label6;

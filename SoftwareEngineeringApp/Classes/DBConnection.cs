@@ -195,22 +195,22 @@ namespace SoftwareEngineeringApp.Classes
             return value;
         }
 
-        //niha reference youtube link:
+        //niha reference youtube link: https://www.youtube.com/watch?v=aer8S1fFbNc 
+        // also from https://www.w3schools.com/
         public void InsertUser(int UserID, string name, string surname, string email, int roleID, int siteID)
         {
             DBConnection dbcon = DBConnection.getInstanceOfDBConnection();
-            string query = "insert into Users values (@Name,@Surname,@Email,@Password,@Role_ID,@Site_ID)";
+            string query = "insert into Users values (@User_ID,@Name,@Surname,@Email,@Role_ID,@Site_ID)";
             using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
             {
                 connToDB.Open();
                 using (SqlCommand cmd = new SqlCommand(query, connToDB))
                 {
 
-                   // cmd.Parameters.AddWithValue("@User_ID", UserID);
+                    cmd.Parameters.AddWithValue("@User_ID", UserID);
                     cmd.Parameters.AddWithValue("@Name", name);
                     cmd.Parameters.AddWithValue("@Surname", surname);
                     cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Password", "Default");
                     cmd.Parameters.AddWithValue("@Role_ID", roleID);
                     cmd.Parameters.AddWithValue("@Site_ID", siteID);
 
@@ -219,6 +219,52 @@ namespace SoftwareEngineeringApp.Classes
                     MessageBox.Show("Successfully Saved!");
 
                 }
+            }
+        }
+
+        public void UpdateUser(int UserID, string name, string surname, string email, int roleID, int siteID)
+        {
+            DBConnection dbcon = DBConnection.getInstanceOfDBConnection();
+            string query = "update Users set Name=@Name,Surname=@Surname,Email=@Email,Role_ID=@Role_ID,Site_ID=@Site_ID";
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                using (SqlCommand cmd = new SqlCommand(query, connToDB))
+                {
+                   // cmd.Parameters.AddWithValue("@User_ID", UserID);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Surname", surname);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Role_ID", roleID);
+                    cmd.Parameters.AddWithValue("@Site_ID", siteID);
+                    cmd.ExecuteNonQuery();
+
+
+                    MessageBox.Show("Successfully Updated!");
+
+
+                }
+
+
+            }
+        }
+
+        public void DeleteUser(int UserID)
+        {
+            DBConnection dbcon = DBConnection.getInstanceOfDBConnection();
+            string query = "DELETE FROM Users WHERE User_ID=@User_ID";
+            using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
+            {
+                connToDB.Open();
+                using (SqlCommand cmd = new SqlCommand(query, connToDB))
+                {
+                    cmd.Parameters.AddWithValue("@User_ID", UserID);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Successfully Deleted!");
+                }
+                 
+
             }
         }
 
