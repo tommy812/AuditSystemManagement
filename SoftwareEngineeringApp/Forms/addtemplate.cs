@@ -22,72 +22,42 @@ namespace SoftwareEngineeringApp.Forms
 
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void QuestionsLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void Savebtn_Click(object sender, EventArgs e)
         {
+            DialogResult result;
+            result = MessageBox.Show("Do you want to save this template?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            string templateName = textBox2.Text;
+            string category = textBox3.Text;
+            string answer = textBox1.Text;
+            string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
             Savebtn_Click();
         }
-        public void Savebtn_Click() { }
-           
-          public static string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
-        public static void a() 
+
+        //where I want the  created template to be saved
+        public void Savebtn_Click()
+        {
+            DialogResult result;
+            result = MessageBox.Show("Do you want to save this template?", "SAVE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
             {
-                DialogResult result;
-                result = MessageBox.Show("Do you want to save this template?");/*MessageBoxButtons "Y/N", MessageBoxIcon .Question);*/
-                if (result == DialogResult.No)
-                {
-                    return;
-                }
-
-                //saveMethod();
-
+                return;
             }
 
-            private void Cancelbtn_Click(object sender, EventArgs e)
-            {
-                /*  cancelMethod(); base.Properties.SetObject(Cancelbtn_Click);
-                  if ((value != null) {
-                      value.DialogResult = DialogResult.Cancel;
+            string templateName= textBox2.Text;
+            string category = textBox3.Text;
+            string answer = textBox1.Text;
+            string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
 
-                  }
+         }
 
-                  }
-                  */
-            }
-            private void saveMethod()
-            {
-
-            }
-            private void cancelMethod()
-            {
-
-            }
-
-
-
-            private void TextBox1_TextChanged_1(object sender, EventArgs e)
-            {
-
-            }
+            
 
             private void Nextbtn(object sender, EventArgs e)
             {
@@ -101,6 +71,11 @@ namespace SoftwareEngineeringApp.Forms
         private void Exitbtn(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Addtemplate_Load(object sender, EventArgs e)
+        {
+
         }
     }
     } 
