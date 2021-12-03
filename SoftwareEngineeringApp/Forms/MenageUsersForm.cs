@@ -85,8 +85,7 @@ namespace SoftwareEngineeringApp.Forms
             email = emailTxt.Text;
             roleID = Int32.Parse(roleTxt.Text);
             siteID = Int32.Parse(siteTxt.Text);
-            int id = dbConn.CountElements("Users");
-            id++;
+            int id = Int32.Parse(userTxt.Text);
             userID = id;
             dbConn.UpdateUser(userID, name, surname, email, roleID, siteID);
             FillGrid();
