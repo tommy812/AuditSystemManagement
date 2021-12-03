@@ -51,8 +51,9 @@ namespace SoftwareEngineeringApp.Classes
 				string path = dir + name;
 				PdfWriter.GetInstance(pdfDoc, new FileStream(path, FileMode.OpenOrCreate));
 				pdfDoc.Open();
+				var imagepath = Directory.GetCurrentDirectory() + "\\Logo.jpg";
 
-				var imagepath = "C:/Users/thoma/Source/Repos/SoftwareEngineeringApp7/SoftwareEngineeringApp/Logo.jpg";
+				//var imagepath = "C:/Users/thoma/Source/Repos/SoftwareEngineeringApp7/SoftwareEngineeringApp/Logo.jpg";
 				using (FileStream fs = new FileStream(imagepath, FileMode.Open))
 				{
 					var png = Image.GetInstance(System.Drawing.Image.FromStream(fs), ImageFormat.Png);
