@@ -33,8 +33,8 @@ namespace SoftwareEngineeringApp.Forms
                 return;
             }
 
-            string templateName = textBox2.Text;
-            string category = textBox3.Text;
+            //string templateName = textBox2.Text;
+           // string category = textBox3.Text;
             string answer = textBox1.Text;
             string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
             Savebtn_Click();
@@ -50,8 +50,8 @@ namespace SoftwareEngineeringApp.Forms
                 return;
             }
 
-            string templateName= textBox2.Text;
-            string category = textBox3.Text;
+            //string templateName= textBox2.Text;
+            //string category = textBox3.Text;
             string answer = textBox1.Text;
             string dirParameter = AppDomain.CurrentDomain.BaseDirectory + @"\file.txt";
 

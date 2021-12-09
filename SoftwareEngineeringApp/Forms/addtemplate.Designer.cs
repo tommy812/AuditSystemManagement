@@ -93,7 +93,7 @@
             this.QuestionsLbl.TabIndex = 6;
             this.QuestionsLbl.Text = "Question:";
             this.QuestionsLbl.Visible = false;
-            this.QuestionsLbl.Click += new System.EventHandler(this.QuestionsLbl_Click);
+           // this.QuestionsLbl.Click += new System.EventHandler(this.QuestionsLbl_Click);
             // 
             // savebtn
             // 
