@@ -77,7 +77,7 @@ namespace SoftwareEngineeringApp.Forms
             UserGridV.DataSource = dt;
 
         }
-
+         
         private void btn_Update_Click(object sender, EventArgs e)
         {
             name = nameTxt.Text;

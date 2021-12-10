@@ -125,6 +125,7 @@ namespace SoftwareEngineeringApp.Classes
             return datatable; 
         }
 
+        //method for  search button
         public DataTable GetValueByID(string query, int id, string var)
         {
 
@@ -225,13 +226,13 @@ namespace SoftwareEngineeringApp.Classes
         public void UpdateUser(int UserID, string name, string surname, string email, int roleID, int siteID)
         {
             DBConnection dbcon = DBConnection.getInstanceOfDBConnection();
-            string query = "update Users set Name=@Name,Surname=@Surname,Email=@Email,Role_ID=@Role_ID,Site_ID=@Site_ID";
+            string query = "update Users set Name=@Name,Surname=@Surname,Email=@Email,Role_ID=@Role_ID,Site_ID=@Site_ID where User_ID=@User_ID";
             using (SqlConnection connToDB = new SqlConnection(dBConnectionString))
             {
                 connToDB.Open();
                 using (SqlCommand cmd = new SqlCommand(query, connToDB))
                 {
-                   // cmd.Parameters.AddWithValue("@User_ID", UserID);
+                    cmd.Parameters.AddWithValue("@User_ID", UserID);
                     cmd.Parameters.AddWithValue("@Name", name);
                     cmd.Parameters.AddWithValue("@Surname", surname);
                     cmd.Parameters.AddWithValue("@Email", email);
