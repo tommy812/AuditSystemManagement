@@ -73,12 +73,12 @@ namespace SoftwareEngineeringApp.Forms
             {
                 MessageBox.Show("Insert a job Description.", "Field Missing");
             }
-            //else { 
+            else { 
 
                 InspectionForm form2 = new InspectionForm(Int32.Parse(TemplateNoTxt.Text), Int32.Parse(AuditIDTxt.Text), DateTime.Parse(DateTxt.Text), TypeTxt.Text, SupervisorCB.Text, InspectorTxt.Text, SiteTxt.Text, WorkAreaCB.Text, DescriptionTxt.Text);
                 form2.Show();
                 this.Close();
-            //}
+            }
         }
     }
 }

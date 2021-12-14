@@ -30,7 +30,8 @@ namespace SoftwareEngineeringApp.Forms
         private void fillGridView(int ID)
         {
             DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
-            DataSet datasetQuestions = dbConn.GetData("select a.question_ID, q.question, c.category from Audit a inner join categories c on a.category_ID = c.category_ID inner join questions q on a.question_ID = q.question_ID where Audit_ID= " + ID + "");
+            DataSet datasetQuestions = dbConn.GetData("select a.question_ID, q.question, c.category from Audit a" +
+                " inner join categories c on a.category_ID = c.category_ID inner join questions q on a.question_ID = q.question_ID where Audit_ID= " + ID + "");
             QuestionGrid.DataSource = datasetQuestions.Tables[0];
         }
 
@@ -45,7 +46,8 @@ namespace SoftwareEngineeringApp.Forms
 
                 string actionTaken = null;
 
-                string query = ("SELECT Interventions, Completed, Action_Taken, Comment FROM audit WHERE audit_ID=@audit_ID and question_ID = @question_ID");
+                string query = ("SELECT Interventions, Completed, Action_Taken, Comment FROM audit" +
+                    " WHERE audit_ID=@audit_ID and question_ID = @question_ID");
                 DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
                 DataTable dataTableSite = dbConn.GetValueByID2(query, questionID, "question_ID", audit_ID, "audit_ID");
 

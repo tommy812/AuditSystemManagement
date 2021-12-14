@@ -17,17 +17,24 @@ namespace SoftwareEngineeringApp.Classes
     {
 		public void GetHeader(int id)
         {
+			//Retrive report infromation using the report id 
 			DBConnection dbConn = DBConnection.getInstanceOfDBConnection();
-			DataTable hdt = dbConn.GetData2("Select a.Audit_ID, a.Date, a.Completed_By, s.Site_Name, w.Area, u.Name, u.Name, t.type, te.template_name, i.Interventions From audit_info a inner join Sites s on a.Site_ID = s.Site_ID inner join work_area w on a.Area_ID = w.Work_area_ID inner join users u on a.Supervisor_ID = u.User_ID and a.Inspector_ID = u.User_ID inner join Inspection_type t on a.Type_ID = t.type_ID inner join Template te on a.template_ID = te.template_ID inner join audit_Overall_result i on a.audit_ID = i.audit_ID");
+			DataTable hdt = dbConn.GetData2("Select a.Audit_ID, a.Date, a.Completed_By, s.Site_Name, w.Area, u.Name, u.Name, t.type, " +
+				"te.template_name, i.Interventions From audit_info a inner join Sites s on a.Site_ID = s.Site_ID inner join work_area w on " +
+				"a.Area_ID = w.Work_area_ID inner join users u on a.Supervisor_ID = u.User_ID and a.Inspector_ID = u.User_ID inner join" +
+				" Inspection_type t on a.Type_ID = t.type_ID inner join Template te on a.template_ID = te.template_ID inner join" +
+				" audit_Overall_result i on a.audit_ID = i.audit_ID");
 			
-			string query = ("SELECT q.question, a.Interventions, a.Completed, a.Action_Taken, a.Comment FROM audit a inner join Questions q on q.question_ID = a.question_ID WHERE a.audit_ID=@audit_ID");
+			string query = ("SELECT q.question, a.Interventions, a.Completed, a.Action_Taken, a.Comment FROM audit a inner join Questions q" +
+				" on q.question_ID = a.question_ID WHERE a.audit_ID=@audit_ID");
 			DataTable dt = dbConn.GetValueByID(query,id, "audit_ID");
 
-			query = ("Select c.Category, a.interventions from Audit_category_results a inner join Categories c on c.category_ID = a.category_ID  WHERE a.audit_ID=@audit_ID");
+			query = ("Select c.Category, a.interventions from Audit_category_results a inner join Categories c on c.category_ID = a.category_ID " +
+				" WHERE a.audit_ID=@audit_ID");
 			DataTable Cinterventions = dbConn.GetValueByID(query, id, "audit_ID");
 
 
-
+			// method to generate pdf 
 			ExportToPdf(id, dt, hdt, Cinterventions);
 
 
@@ -35,7 +42,7 @@ namespace SoftwareEngineeringApp.Classes
 
 		//Teplate Design Resource: https://youtu.be/JBSt2L_faD8
 		private void ExportToPdf(int audit_ID, DataTable dt, DataTable hdt, DataTable interventions)
-		{
+		{ // create pdf 
 			try
 			{
 				var pdfDoc = new Document(PageSize.A4, 40f, 40f, 60f, 60f);

@@ -45,7 +45,7 @@ namespace SoftwareEngineeringApp
         //Activate Student Form Function
          private Form ActiveForm = null;
         
-       
+      
        
         //openform
         public void openForm(Form ToOpenForm)

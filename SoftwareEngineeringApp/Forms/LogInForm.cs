@@ -57,7 +57,8 @@ namespace SoftwareEngineeringApp
                     user_role = "Inspector";
                 }
                 site_name = user.SiteName;
-                MessageBox.Show("Logged in as: "+Environment.NewLine+" Name: " + user.Name + ", Surname: " + user.Surname + ", Role: " + user_role + ", Site: " + site_name);
+                MessageBox.Show("Logged in as: "+Environment.NewLine+" Name: " + user.Name + ", Surname:" +
+                    " " + user.Surname + ", Role: " + user_role + ", Site: " + site_name);
 
                 
                 MainForm form2 = new MainForm(user.Name, user.Surname, user_role, site_name);
